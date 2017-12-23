@@ -9,3 +9,25 @@
     font-family: 'Roboto', sans-serif;
     color: white;
 }
+
+.pagebody {
+    background-color: #f2f2f2;
+
+}
+
+.bodytext {
+    padding-top: 15px;
+    padding-bottom: 30px;
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+}
+
+.ptext {
+    margin-top: 15px;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+}
+

@@ -19,5 +19,25 @@ h3 {
     margin-top: 15px;
 }
 
+* {
+    box-sizing: border-box;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+header {
+    animation-duration: 1s; /* the duration of the animation */
+    animation-timing-function: ease-out; /* how the animation will behave */
+    animation-delay: 0s; /* how long to delay the animation from starting */
+    animation-iteration-count: 1; /* how many times the animation will play */
+    animation-name: slideInFromLeft; /* the name of the animation we defined above */
+}
 
 
