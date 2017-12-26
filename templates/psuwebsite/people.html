@@ -84,6 +84,70 @@
                     </div>
 
                 {% endfor %}
+
+                <h2 class = "level-0">Postdocs</h2>
+                {% for postdoc in postdocs %}
+
+                    <div class = "team-row" id = "postdoc-row-{{ forloop.counter }}">
+                        <div class = "picture">
+                            <img src="{{ postdoc.image.url }}" width = "100" height = "137" class = "img-responsive img-rounded">
+                        </div>
+                        <div class = "professor-name">
+                            <a href = "{{ postdoc.webpageurl }}">{{ postdoc.name}}</a>
+                        </div>
+                        <div class = "professor-shortdescription">
+                            {{ postdoc.occupation }}
+                        </div>
+                        <div class = "professor-description">
+                            {{ postdoc.description }}
+                        </div>
+
+                    </div>
+
+                {% endfor %}
+
+                <h2 class = "level-1">PhD Students</h2>
+                {% for phdstudent in phdstudents%}
+
+                    <div class = "team-row" id = "phdstudent-row-{{ forloop.counter }}">
+                        <div class = "picture">
+                            <img src="{{ phdstudent.image.url }}" width = "100" height = "137" class = "img-responsive img-rounded">
+                        </div>
+                        <div class = "professor-name">
+                            <a href = "{{ phdstudent.webpageurl }}">{{ phdstudent.name}}</a>
+                        </div>
+                        <div class = "professor-shortdescription">
+                            {{ phdstudent.occupation }}
+                        </div>
+                        <div class = "professor-description">
+                            {{ phdstudent.description }}
+                        </div>
+
+                    </div>
+
+                {% endfor %}
+
+                <h2 class = "level-1">Masters Students</h2>
+                {% for master in masters%}
+
+                    <div class = "team-row" id = "master-row-{{ forloop.counter }}">
+                        <div class = "picture">
+                            <img src="{{ master.image.url }}" width = "100" height = "137" class = "img-responsive img-rounded">
+                        </div>
+                        <div class = "professor-name">
+                            <a href = "{{ master.webpageurl }}">{{ master.name}}</a>
+                        </div>
+                        <div class = "professor-shortdescription">
+                            {{ master.occupation }}
+                        </div>
+                        <div class = "professor-description">
+                            {{ master.description }}
+                        </div>
+
+                    </div>
+
+                {% endfor %}
+
                 <h2 class = "level-1">Undergraduates</h2>
                 {% for undergraduate in undergraduates %}
 
@@ -104,6 +168,47 @@
                     </div>
 
                 {% endfor %}
+
+                <h2 class = "level-2">Staff</h2>
+                {% for staff in staffs%}
+
+                    <div class = "team-row" id = "staff-row-{{ forloop.counter }}">
+                        <div class = "picture">
+                            <img src="{{ staff.image.url }}" width = "100" height = "137" class = "img-responsive img-rounded">
+                        </div>
+                        <div class = "professor-name">
+                            <a href = "{{ staff.webpageurl }}">{{ staff.name}}</a>
+                        </div>
+                        <div class = "professor-shortdescription">
+                            {{ staff.occupation }}
+                        </div>
+                        <div class = "professor-description">
+                            {{ staff.description }}
+                        </div>
+
+                    </div>
+
+                {% endfor %}
+
+                <div class = "alumnitext">Alumni</div>
+                <h2 class = "alumnilevel col-sm-5">Postdocs</h2>
+                <h2 class = "Currentposition col-sm-7">Current Work</h2>
+                {%  for postdocalumni in postdocsalumni %}
+
+                    <div class = "alumni-row" id = "postdocalumni-row-{{ forloop.counter }}">
+                        <div class = "alumni-name col-sm-5">
+                            <a href = "{{ postdocalumni.webpageurl }}">{{ postdocalumni.name}}</a>
+                        </div>
+
+                        <div class = "alumni-description col-sm-7">
+                            {{ postdocalumni.currentposition }}
+                        </div>
+
+                    </div>
+
+                {% endfor %}
+
+
             </div>
         </div>
     </div>

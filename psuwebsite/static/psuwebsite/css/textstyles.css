@@ -44,10 +44,41 @@ h2 {
     font-family: 'Roboto', sans-serif;
 }
 
+.alumnitext {
+    font-size: 35px;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+    float: left;
+    margin-top: 20px;
+    margin-left: -102px;
+}
+
 .level {
     font-size: 30px;
     font-family: 'Roboto', sans-serif;
     float: left;
+}
+
+.alumnilevel {
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+    float: left;
+    margin-top: 100px;
+    margin-left: -125px;
+}
+
+.Currentposition {
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 100px;
+}
+
+.level-0 {
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    float: left;
+    margin-left: -102px;
+    margin-top: 45px;
 }
 
 .level-1 {
@@ -57,10 +88,23 @@ h2 {
     margin-left: -102px;
 }
 
+.level-2 {
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    float: left;
+    margin-left: 0px;
+}
+
 .professor-row {
     clear: both;
     min-height: 110px;
     margin-bottom: 20px;
+}
+
+.alumni-row {
+    clear: both;
+    min-height: 30px;
+    margin-bottom: 10px;
 }
 
 .picture {
@@ -75,6 +119,12 @@ h2 {
     font-family: 'Roboto', sans-serif;
 }
 
+.alumni-name {
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+}
+
 .professor-shortdescription {
     font-size: 18px;
     font-weight: 600;
@@ -83,6 +133,13 @@ h2 {
 }
 
 .professor-description {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 130px;
+}
+
+.alumni-description {
     font-size: 16px;
     font-weight: 400;
     font-family: 'Roboto', sans-serif;
