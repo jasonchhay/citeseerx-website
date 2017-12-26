@@ -31,3 +31,30 @@ h2 {
     font-family: 'Roboto', sans-serif;
 }
 
+.peopletitletext {
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    margin-left: -16px;
+}
+
+.teamtext {
+    font-size: 40px;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+}
+
+.level {
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.professor-row {
+    clear: both;
+    min-height: 110px;
+    margin-bottom: 20px;
+}
+
+.picture {
+    float: left;
+}

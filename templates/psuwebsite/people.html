@@ -27,7 +27,8 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-<body>
+  <body>
+
     <!-- The navigation tabs -->
 	<nav class="navbar navbar-custom">
 		<div class="container">
@@ -53,17 +54,25 @@
     <header>
         <div class = "pagetitle" >
             <div class = "container">
-                <h1 class = "titletext">People</h1>
+                <h1 class = "peopletitletext">People</h1>
             </div>
         </div>
     </header>
 
     <div class = "pagebody">
         <div class = "container bodytext">
-            <div class = "row">
-                <h2>Professors</h2>
+            <div id="content-container" class = "row">
+                <div class = "teamtext">The Team</div>
+                <h2 class = level>Professors</h2>
                 {%  for professor in professors %}
-                    <p>{{ professor.name}}</p>
+
+                    <div class = "professor-row" id = "professor-row-{{ forloop.counter }}">
+                        <div class = "picture">
+                            <img src="{{ professor.image.url }}" width = "100" height = "137">
+                        </div>
+                        <a href = "{{ professor.webpageurl }}">{{ professor.name}}</a>
+                    </div>
+
                 {% endfor %}
             </div>
         </div>
@@ -124,5 +133,5 @@
 			</div>
 
     </footer>
-</body>
+  </body>
 </html>
