@@ -57,4 +57,26 @@ h2 {
 
 .picture {
     float: left;
+    margin-bottom: 20px;
+}
+
+.professor-name {
+    margin-left: 130px;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+}
+
+.professor-shortdescription {
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 130px;
+}
+
+.professor-description {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 130px;
 }

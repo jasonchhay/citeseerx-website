@@ -68,9 +68,18 @@
 
                     <div class = "professor-row" id = "professor-row-{{ forloop.counter }}">
                         <div class = "picture">
-                            <img src="{{ professor.image.url }}" width = "100" height = "137">
+                            <img src="{{ professor.image.url }}" width = "100" height = "137" class = "img-responsive img-rounded">
                         </div>
-                        <a href = "{{ professor.webpageurl }}">{{ professor.name}}</a>
+                        <div class = "professor-name">
+                            <a href = "{{ professor.webpageurl }}">{{ professor.name}}</a>
+                        </div>
+                        <div class = "professor-shortdescription">
+                            {{ professor.shortdescription }}
+                        </div>
+                        <div class = "professor-description">
+                            {{ professor.description }}
+                        </div>
+
                     </div>
 
                 {% endfor %}
