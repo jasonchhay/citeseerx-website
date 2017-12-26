@@ -61,8 +61,10 @@
     <div class = "pagebody">
         <div class = "container bodytext">
             <div class = "row">
-
-
+                <h2>Professors</h2>
+                {%  for professor in professors %}
+                    <p>{{ professor.name}}</p>
+                {% endfor %}
             </div>
         </div>
     </div>
