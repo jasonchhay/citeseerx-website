@@ -47,6 +47,14 @@ h2 {
 .level {
     font-size: 30px;
     font-family: 'Roboto', sans-serif;
+    float: left;
+}
+
+.level-1 {
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    float: left;
+    margin-left: -102px;
 }
 
 .professor-row {
@@ -79,4 +87,10 @@ h2 {
     font-weight: 400;
     font-family: 'Roboto', sans-serif;
     margin-left: 130px;
+}
+
+.team-row {
+    clear: both;
+    min-height: 110px;
+    margin-bottom: 20px;
 }
