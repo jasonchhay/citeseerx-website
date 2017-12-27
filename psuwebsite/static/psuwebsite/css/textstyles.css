@@ -64,13 +64,26 @@ h2 {
     font-family: 'Roboto', sans-serif;
     float: left;
     margin-top: 100px;
-    margin-left: -125px;
+    margin-left: -124px;
+}
+
+.alumnilevel-1 {
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+    float: left;
+    margin-top: 20px;
+    margin-left: -13px;
 }
 
 .Currentposition {
     font-size: 25px;
     font-family: 'Roboto', sans-serif;
     margin-top: 100px;
+}
+
+.Currentposition-1 {
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
 }
 
 .level-0 {
@@ -143,11 +156,17 @@ h2 {
     font-size: 16px;
     font-weight: 400;
     font-family: 'Roboto', sans-serif;
-    margin-left: 130px;
+    margin-left: -10px;
 }
 
 .team-row {
     clear: both;
     min-height: 110px;
     margin-bottom: 20px;
+}
+
+.alumni-major {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
 }

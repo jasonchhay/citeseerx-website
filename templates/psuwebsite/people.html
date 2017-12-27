@@ -191,22 +191,116 @@
                 {% endfor %}
 
                 <div class = "alumnitext">Alumni</div>
-                <h2 class = "alumnilevel col-sm-5">Postdocs</h2>
-                <h2 class = "Currentposition col-sm-7">Current Work</h2>
-                {%  for postdocalumni in postdocsalumni %}
 
-                    <div class = "alumni-row" id = "postdocalumni-row-{{ forloop.counter }}">
-                        <div class = "alumni-name col-sm-5">
-                            <a href = "{{ postdocalumni.webpageurl }}">{{ postdocalumni.name}}</a>
+                {% if postdocsalumni %}
+                <div>
+                    <h2 class = "alumnilevel col-sm-6">Postdocs</h2>
+                    <h2 class = "Currentposition col-sm-5">Current Work</h2>
+                    {%  for postdocalumni in postdocsalumni %}
+
+                        <div class = "alumni-row" id = "postdocalumni-row-{{ forloop.counter }}">
+                           <div class = "alumni-name col-sm-6">
+                             <a href = "{{ postdocalumni.webpageurl }}">{{ postdocalumni.name}}</a>
+                               <br><i class = "alumni-major">{{ postdocalumni.major }}</i><br/>
+                           </div>
+                           <div class = "alumni-description col-sm-5">
+                               {{ postdocalumni.currentposition }}
+                           </div>
+
+
                         </div>
 
-                        <div class = "alumni-description col-sm-7">
-                            {{ postdocalumni.currentposition }}
+                    {% endfor %}
+
+                </div>
+                {% endif %}
+
+
+                {% if phdstudentsalumni %}
+                <div>
+                    <h2 class = "alumnilevel-1 col-sm-11">PhD Students</h2>
+                    {%  for phdstudentalumni in phdstudentsalumni %}
+
+                        <div class = "alumni-row" id = "phdstudentalumni-row-{{ forloop.counter }}">
+                           <div class = "alumni-name col-sm-6">
+                             <a href = "{{ phdstudentalumni.webpageurl }}">{{ phdstudentalumni.name}}</a>
+                               <br><i class = "alumni-major">{{ phdstudentalumni.major }}</i><br/>
+                           </div>
+                           <div class = "alumni-description col-sm-5">
+                               {{ phdstudentalumni.currentposition }}
+                           </div>
+
                         </div>
 
-                    </div>
+                    {% endfor %}
 
-                {% endfor %}
+                </div>
+                {% endif %}
+
+                {% if mastersalumni %}
+                <div>
+                    <h2 class = "alumnilevel-1 col-sm-11">Masters Students</h2>
+                    {%  for masteralumni in mastersalumni %}
+
+                        <div class = "alumni-row" id = "masteralumni-row-{{ forloop.counter }}">
+                           <div class = "alumni-name col-sm-6">
+                             <a href = "{{ masteralumni.webpageurl }}">{{ masteralumni.name}}</a>
+                               <br><i class = "alumni-major">{{ masteralumni.major }}</i><br/>
+                           </div>
+                           <div class = "alumni-description col-sm-5">
+                               {{ masteralumni.currentposition }}
+                           </div>
+
+                        </div>
+
+                    {% endfor %}
+
+                </div>
+                {% endif %}
+
+                {% if undergraduatesalumni %}
+                <div>
+                    <h2 class = "alumnilevel-1 col-sm-11">Undergraduate Students</h2>
+                    {%  for undergraduatealumni in undergraduatesalumni %}
+
+                        <div class = "alumni-row" id = "undergraduatealumni-row-{{ forloop.counter }}">
+                           <div class = "alumni-name col-sm-6">
+                             <a href = "{{ undergraduatealumni.webpageurl }}">{{ undergraduatealumni.name}}</a>
+                               <br><i class = "alumni-major">{{ undergraduatealumni.major }}</i><br/>
+                           </div>
+                           <div class = "alumni-description col-sm-5">
+                               {{ undergraduatealumni.currentposition }}
+                           </div>
+
+                        </div>
+
+                    {% endfor %}
+
+                </div>
+                {% endif %}
+
+                {% if staffsalumni  %}
+                <div>
+                    <h2 class = "alumnilevel-1 col-sm-11">Staff</h2>
+                    {%  for staffalumni in staffsalumni %}
+
+                        <div class = "alumni-row" id = "staffalumni-row-{{ forloop.counter }}">
+                           <div class = "alumni-name col-sm-6">
+                             <a href = "{{ staffalumni.webpageurl }}">{{ staffalumni.name}}</a>
+                               <br><i class = "alumni-major">{{ staffalumni.major }}</i><br/>
+                           </div>
+                           <div class = "alumni-description col-sm-5">
+                               {{ staffalumni.currentposition }}
+                           </div>
+
+                        </div>
+
+                    {% endfor %}
+
+                </div>
+
+                {% endif %}
+
 
 
             </div>
