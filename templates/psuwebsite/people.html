@@ -30,35 +30,29 @@
   <body>
 
     <!-- The navigation tabs -->
-	<nav class="navbar navbar-custom">
-		<div class="container">
-			<div class="navbar-header">
-                <a class = "navbar-brand" href = "/">
-                    <img src = "{% static 'psuwebsite/img/psu-logo1.png' %}" alt = "PSU logo" width = "60" height = "60" class="navbar-left navbar-left-img">
-                    <a class = "navbar-left" href = "/home"><h3 class="hidden-xs"> The Penn State Natural Language Processing Group</h3>
-                    <h3 class = "hidden-sm hidden-md hidden-lg hidden-xl">The PSU NLP Group</h3></a>
-                </a>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-right navbar-right-custom">
-                    <li role="presentation"><a href="/home">Home</a></li>
-                    <li role="presentation"><a href="services.html">Projects</a></li>
-                    <li role="presentation"><a href="/people">People</a></li>
-                    <li role="presentation"><a href="/publications">Publications</a></li>
-                    <li role="presentation"><a href="contact.html">Blog</a></li>
-                    <li role="presentation"><a href="/admin">Admin Login</a></li>
-                </ul>
-            </div>
+	<div class = "backgroundimage">
+        <h3>Penn State Natural Language Processing Group</h3>
+        <div class="psunav">
+            <ul>
+                <li class = "li-1"><a href="/home"><div class = "colorchange">Home</div></a></li>
+                <li class = "li-2"><a href="services.html"><div class = "colorchange">Projects</div></a></li>
+                <li class = "li-2"><a href="/people"><div class = "colorchange active-choice">People</div></a></li>
+                <li class = "li-2"><a href="/publications"><div class = "colorchange">Publications</div></a></li>
+                <li class = "li-2"><a href="contact.html"><div class = "colorchange">Blog</div></a></li>
+                <li class = "li-2"><a href="/admin"><div class = "colorchange">Admin Login</div></a></li>
+            </ul>
         </div>
-	</nav>
-    <!-- animated banner -->
-    <header>
-        <div class = "pagetitle" >
-            <div class = "container">
-                <h1 class = "peopletitletext">People</h1>
+    </div>
+
+    <div>
+        <header>
+            <div class = "pagetitle" >
+                <div class = "container">
+                    <h1 class = "titletext">People</h1>
+                </div>
             </div>
-        </div>
-    </header>
+        </header>
+    </div>
 
     <div class = "pagebody">
         <div class = "container bodytext">

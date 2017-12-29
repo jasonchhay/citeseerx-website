@@ -25,6 +25,19 @@ h3 {
     color: #C0C0C0;
 }
 
+.colorchange:hover {
+    border-bottom: 3px solid #fff;
+    color: #fff;
+}
+
+*a {
+    text-decoration: none;
+}
+
+a:hover {
+    border-bottom: 0px;
+}
+
 .active-choice {
     color: #fff;
     border-bottom: 3px solid #fff;
