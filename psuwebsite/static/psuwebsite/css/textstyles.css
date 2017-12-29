@@ -2,12 +2,15 @@
     background-color: #093162;
     padding: 30px;
     box-shadow: #093147 0px 0px 4px 2px inset;
+    height: 80px;
 }
 
 .titletext {
-    margin-bottom: 20px;
+    margin-top: -13px;
     font-family: 'Roboto', sans-serif;
     color: white;
+    text-align: center;
+
 }
 
 .pagebody {
