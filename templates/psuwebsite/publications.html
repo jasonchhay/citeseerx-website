@@ -14,10 +14,15 @@
     <link href="{% static 'psuwebsite/css/textstyles.css' %}" rel = "stylesheet">
     <link rel="stylesheet" href="{% static 'psuwebsite/css/footer-distributed-with-address-and-phones.css' %}">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="{% static 'psuwebsite/js/jquery-3.2.1.min.js' %}" type = "text/javascript"></script>
-    <!-- <script src="{% static 'psuwebsite/js/bootstrap.min.js' %}" type = "text/javascript"></script> -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="{% static 'psuwebsite/css/datatables.css' %}"/>
+
+
+    <script src="{% static 'psuwebsite/js/jquery-3.2.1.js' %}"></script>
+    <script src="{% static 'psuwebsite/js/bootstrap.js' %}" type = "text/javascript"></script>
+
+    <script src="{% static 'psuwebsite/js/datatables.js' %}"></script>
+
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>--
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -51,6 +56,53 @@
         </header>
     </div>
 
+    <div class = "pagebody">
+        <div class = "container bodytext">
+            <div class = "row">
+                <div class = "col-md-3">
+
+                </div>
+                <div class = "col-md-9">
+                    <div class = "col-sm-12 col-md-12 centerinputfix">
+                        <input type = "text" placeholder = "Title" id = "titleinput" class = "form-control titleform" onkeyup = "titlequery()">
+                    </div>
+                    <table class = "table dataTable" id = "publications">
+                        <thead class = "border-bottom-black">
+                            <tr>
+                                <th rowspan="2" colspan="1" class = "border-bottom-black">
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody class = 'fontchange'>
+                            {% for publication in publications %}
+                                {% if forloop.counter|divisibleby:2 %}
+                                    <tr class = "highlight">
+                                {% else %}
+                                    <tr class = "highlight2">
+                                {% endif %}
+                                        <td>
+                                            <div id = 'author'>{{ publication.author }}, {{ publication.year }}</div>
+                                            <div id = 'title'>
+                                                <b> {{ publication.title}}
+                                                </b>
+                                            </div>
+                                            <div id = 'venue'>
+                                            {{ publication.venue }}
+                                            </div>
+                                            [
+                                            <a href= "{{ publication.paperfile.url }}" download>paper</a>
+                                            ,
+                                            <a href=" {{ publication.bibfile.url }}" download>bib</a>
+                                            ]
+                                        </td>
+                                    </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <footer class="footer-distributed">
@@ -106,4 +158,45 @@
 		</footer>
 
   </body>
+
+  <!--<script>
+
+      var table = document.getElementById("publications");
+      function titlequery() {
+
+          var title = this.value;
+          var input = document.getElementById("titleinput").value.toUpperCase();
+          var tr = table.getElementsByTagName("tr");
+          for (i = 1; i < tr.length; i++ ){
+              td = tr[i].getElementsByTagName("div")[1];
+              if(td) {
+                  if(td.innerHTML.toUpperCase().indexOf(input)>-1) {
+                      tr[i].style.dispaly = "";
+                  } else {
+                      tr[i].style.display = "none";
+                  }
+              }
+          }
+
+      }
+  </script> -->
+
+    <script>
+        $("#titleinput").on("keyup", function() {
+           var value = $(this).val().toUpperCase();
+
+           $("table tr").each(function(index){
+              if(index !=0) {
+                  $row = $(this);
+                  var id = $row.find("div").text();
+                   if (id.indexOf(value) == -1) {
+                        $(this).hide();
+                    }
+                    else {
+                        $(this).show();
+                    }
+              }
+           });
+        });
+    </script>
 </html>

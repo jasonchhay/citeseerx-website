@@ -173,3 +173,41 @@ h2 {
     font-weight: 400;
     font-family: 'Roboto', sans-serif;
 }
+
+.titleform {
+    width: 103%;
+    height: 48px;
+    background-color: #fff;
+    position: relative;
+    font-size: 32px;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.centerinputfix {
+    margin-left: -10px;
+}
+
+.highlight {
+    background-color: #BDC3C7 !important;
+}
+
+table {
+    border-collapse: separate;
+}
+
+.border-bottom-black {
+
+    border-bottom: 2px solid #BDC3C7 !important;
+    vertical-align: bottom;
+    height: 10px;
+}
+
+.highlight2 {
+    background-color: #EDF0F1 !important;
+}
+
+.fontchange {
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+}
