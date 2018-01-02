@@ -64,7 +64,7 @@
                 </div>
                 <div class = "col-md-9">
                     <div class = "col-sm-12 col-md-12 centerinputfix">
-                        <input type = "text" placeholder = "Title" id = "titleinput" class = "form-control titleform" onkeyup = "titlequery()">
+                        <input type = "text" placeholder = "Title" id = "titleinput" class = "form-control titleform">
                     </div>
                     <table class = "table dataTable" id = "publications">
                         <thead class = "border-bottom-black">
@@ -76,17 +76,17 @@
                         <tbody class = 'fontchange'>
                             {% for publication in publications %}
                                 {% if forloop.counter|divisibleby:2 %}
-                                    <tr class = "highlight">
+                                    <tr class = "highlight" id = tr{{ forloop.counter }}>
                                 {% else %}
-                                    <tr class = "highlight2">
+                                    <tr class = "highlight2" id = tr{{ forloop.counter }}>
                                 {% endif %}
                                         <td>
-                                            <div id = 'author'>{{ publication.author }}, {{ publication.year }}</div>
-                                            <div id = 'title'>
+                                            <div id = 'author{{ forloop.counter }}'>{{ publication.author }}, {{ publication.year }}</div>
+                                            <div id = 'title{{ forloop.counter }}'>
                                                 <b> {{ publication.title}}
                                                 </b>
                                             </div>
-                                            <div id = 'venue'>
+                                            <div id = 'venue{{ forloop.counter }}'>
                                             {{ publication.venue }}
                                             </div>
                                             [
@@ -184,19 +184,43 @@
     <script>
         $("#titleinput").on("keyup", function() {
            var value = $(this).val().toUpperCase();
+           var num = {{ publications|length }};
+           for ( i = 1; i<={{ publications|length }}; i++ )
+            {
+                var id = 'title' + i;
+                var title = document.getElementById(id).textContent;
+                var title = title.toUpperCase();
+                if(title.indexOf(value) == -1) {
+                    var trnew = "tr" + i;
+                    $("#" + trnew).hide();
+                }
+                else {
+                    var trnew = "tr" + i;
+                    $("#" + trnew).show();
+                }
+            }
+            var counter = 0;
+            $("tr:visible").each(function(){
 
-           $("table tr").each(function(index){
-              if(index !=0) {
-                  $row = $(this);
-                  var id = $row.find("div").text();
-                   if (id.indexOf(value) == -1) {
-                        $(this).hide();
+                if(counter % 2 == 1){
+                    var id = $(this).attr('id');
+                    var classname = $(this).attr('class');
+                    if(classname == "highlight"){
+                        $("#" + id).toggleClass('highlight highlight2');
                     }
-                    else {
-                        $(this).show();
+                    counter++;
+                }
+                else {
+                    var id = $(this).attr('id');
+                    var classname = $(this).attr('class');
+                    if(classname == "highlight2"){
+                        $("#" + id).toggleClass('highlight2 highlight');
                     }
-              }
-           });
+                    counter++;
+                }
+
+            });
+
         });
     </script>
 </html>
