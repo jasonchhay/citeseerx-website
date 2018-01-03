@@ -1,6 +1,6 @@
 {% load staticfiles %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,7 +14,7 @@
     <link href="{% static 'psuwebsite/css/textstyles.css' %}" rel = "stylesheet">
     <link rel="stylesheet" href="{% static 'psuwebsite/css/footer-distributed-with-address-and-phones.css' %}">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="{% static 'psuwebsite/css/datatables.css' %}"/>
+    <link rel="stylesheet" href="{% static 'psuwebsite/css/datatables.css' %}">
 
 
     <script src="{% static 'psuwebsite/js/jquery-3.2.1.js' %}"></script>
@@ -60,7 +60,23 @@
         <div class = "container bodytext">
             <div class = "row">
                 <div class = "col-md-3">
-
+                    <div class = "col-sm-12 col-md-12 centerinputfix">
+                        <input type = "text" placeholder = "Author" id = "authorinput" class = "form-control titleform">
+                    </div>
+                    <div class = "col-sm-12 col-md-12 venuelabel">
+                        Venue
+                    </div>
+                    <br>
+                    <br>
+                    <div class = "col-sm-12 col-md-12">
+                        <div class="form-group">
+                    {% for distinctvenue in distinctvenues %}
+                            <input type="checkbox" id="venue{{ forloop.counter }}" class = "onecheck">
+                            <label for="venue{{ forloop.counter }}" class = "labelword">{{ distinctvenue }}</label>
+                        <br>
+                    {% endfor %}
+                        </div>
+                    </div>
                 </div>
                 <div class = "col-md-9">
                     <div class = "col-sm-12 col-md-12 centerinputfix">
@@ -182,24 +198,9 @@
   </script> -->
 
     <script>
-        $("#titleinput").on("keyup", function() {
-           var value = $(this).val().toUpperCase();
-           var num = {{ publications|length }};
-           for ( i = 1; i<={{ publications|length }}; i++ )
-            {
-                var id = 'title' + i;
-                var title = document.getElementById(id).textContent;
-                var title = title.toUpperCase();
-                if(title.indexOf(value) == -1) {
-                    var trnew = "tr" + i;
-                    $("#" + trnew).hide();
-                }
-                else {
-                    var trnew = "tr" + i;
-                    $("#" + trnew).show();
-                }
-            }
-            var counter = 0;
+
+        function changehighlight() {
+          var counter = 0;
             $("tr:visible").each(function(){
 
                 if(counter % 2 == 1){
@@ -220,7 +221,74 @@
                 }
 
             });
+        };
 
+        $("#titleinput").on("keyup", function() {
+           var value = $(this).val().toUpperCase();
+           var num = {{ publications|length }};
+           for ( i = 1; i<={{ publications|length }}; i++ )
+            {
+                var id = 'title' + i;
+                var title = document.getElementById(id).textContent;
+                var title = title.toUpperCase();
+                if(title.indexOf(value) == -1) {
+                    var trnew = "tr" + i;
+                    $("#" + trnew).hide();
+                }
+                else {
+                    var trnew = "tr" + i;
+                    $("#" + trnew).show();
+                }
+            }
+            changehighlight();
+
+        });
+
+        $("#authorinput").on("keyup", function() {
+           var value = $(this).val().toUpperCase();
+           var num = {{ publications|length }};
+           for ( i = 1; i<={{ publications|length }}; i++ )
+            {
+                var id = 'author' + i;
+                var author = document.getElementById(id).textContent;
+                var author = author.toUpperCase();
+                if(author.indexOf(value) == -1) {
+                    var trnew = "tr" + i;
+                    $("#" + trnew).hide();
+                }
+                else {
+                    var trnew = "tr" + i;
+                    $("#" + trnew).show();
+                }
+            }
+            changehighlight();
+
+        });
+
+        $('input.onecheck').on('change', function() {
+            $('input.onecheck').not(this).prop('checked', false);
+        });
+
+        $('input.onecheck').on('checked', function() {
+
+            $("#"+id).next("label").html()
+           var value = $(this).val().toUpperCase();
+           var num = {{ publications|length }};
+           for ( i = 1; i<={{ publications|length }}; i++ )
+            {
+                var id = 'author' + i;
+                var author = document.getElementById(id).textContent;
+                var author = author.toUpperCase();
+                if(author.indexOf(value) == -1) {
+                    var trnew = "tr" + i;
+                    $("#" + trnew).hide();
+                }
+                else {
+                    var trnew = "tr" + i;
+                    $("#" + trnew).show();
+                }
+            }
+            changehighlight();
         });
     </script>
 </html>

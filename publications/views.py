@@ -7,4 +7,6 @@ from .models import Publications
 
 def publications(request):
     publications = Publications.objects.all().filter().order_by('-year')
-    return render(request, 'psuwebsite/publications.html', {'publications': publications})
+    distinctvenue = Publications.objects.order_by().values_list('venue', flat=True).distinct()
+    return render(request, 'psuwebsite/publications.html', {'publications': publications,
+                                                            'distinctvenues': distinctvenue})
