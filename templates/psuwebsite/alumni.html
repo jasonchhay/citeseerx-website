@@ -15,7 +15,8 @@
     <link href="{% static 'psuwebsite/css/navigation.css' %}" rel = "stylesheet">
     <link href="{% static 'psuwebsite/css/textstyles.css' %}" rel = "stylesheet">
     <link rel="stylesheet" href="{% static 'psuwebsite/css/footer-distributed-with-address-and-phones.css' %}">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link href="{% static 'psuwebsite/css/font-awesome.min.css' %}">
+    <!-- change back <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">-->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="{% static 'psuwebsite/js/jquery-3.2.1.min.js' %}" type = "text/javascript"></script>
     <script src="{% static 'psuwebsite/js/bootstrap.min.js' %}" type = "text/javascript"></script>
@@ -48,7 +49,7 @@
         <header>
             <div class = "pagetitle" >
                 <div class = "container">
-                    <h1 class = "titletext">People</h1>
+                    <h1 class = "titletext">Alumni</h1>
                 </div>
             </div>
         </header>
@@ -63,7 +64,7 @@
                     </h2>
                     <br>
                     <div class = "peopledirectory">
-                        <a href = "{% url 'people' %}"><b>> All People</b></a>
+                    <a href = "{% url 'people' %}">All People</a>
                         <br>
                         <a href = "{% url 'professors' %}">Professors</a>
                         <br>
@@ -77,7 +78,7 @@
                         <br>
                         <a href = "{% url 'staff' %}">Staff</a>
                         <br>
-                        <a href = "{% url 'alumni' %}">Alumni</a>
+                        <a href = "{% url 'alumni' %}"><b>> Alumni</b></a>
 
                     </div>
 
@@ -85,139 +86,11 @@
                 </div>
                 <div class = "col-sm-9">
 
-                <div class = "teamtext">The Team</div>
-                <h2 class = "level">Professors</h2>
-                {%  for professor in professors %}
-
-                    <div class = "professor-row" id = "professor-row-{{ forloop.counter }}">
-                        <div class = "picture">
-                            <img src="{{ professor.image.url }}" width = "100" height = "137" class = "img-responsive img-rounded">
-                        </div>
-                        <div class = "professor-name">
-                            <a href = "{{ professor.webpageurl }}">{{ professor.name}}</a>
-                        </div>
-                        <div class = "professor-shortdescription">
-                            {{ professor.shortdescription }}
-                        </div>
-                        <div class = "professor-description">
-                            {{ professor.description }}
-                        </div>
-
-                    </div>
-
-                {% endfor %}
-
-                <h2 class = "level-0">Postdocs</h2>
-                {% for postdoc in postdocs %}
-
-                    <div class = "team-row" id = "postdoc-row-{{ forloop.counter }}">
-                        <div class = "picture">
-                            <img src="{{ postdoc.image.url }}" width = "100" height = "137" class = "img-responsive img-rounded">
-                        </div>
-                        <div class = "professor-name">
-                            <a href = "{{ postdoc.webpageurl }}">{{ postdoc.name}}</a>
-                        </div>
-                        <div class = "professor-shortdescription">
-                            {{ postdoc.occupation }}
-                        </div>
-                        <div class = "professor-description">
-                            {{ postdoc.description }}
-                        </div>
-
-                    </div>
-
-                {% endfor %}
-
-                <h2 class = "level-1">PhD Students</h2>
-                {% for phdstudent in phdstudents%}
-
-                    <div class = "team-row" id = "phdstudent-row-{{ forloop.counter }}">
-                        <div class = "picture">
-                            <img src="{{ phdstudent.image.url }}" width = "100" height = "137" class = "img-responsive img-rounded">
-                        </div>
-                        <div class = "professor-name">
-                            <a href = "{{ phdstudent.webpageurl }}">{{ phdstudent.name}}</a>
-                        </div>
-                        <div class = "professor-shortdescription">
-                            {{ phdstudent.occupation }}
-                        </div>
-                        <div class = "professor-description">
-                            {{ phdstudent.description }}
-                        </div>
-
-                    </div>
-
-                {% endfor %}
-
-                <h2 class = "level-1">Masters Students</h2>
-                {% for master in masters%}
-
-                    <div class = "team-row" id = "master-row-{{ forloop.counter }}">
-                        <div class = "picture">
-                            <img src="{{ master.image.url }}" width = "100" height = "137" class = "img-responsive img-rounded">
-                        </div>
-                        <div class = "professor-name">
-                            <a href = "{{ master.webpageurl }}">{{ master.name}}</a>
-                        </div>
-                        <div class = "professor-shortdescription">
-                            {{ master.occupation }}
-                        </div>
-                        <div class = "professor-description">
-                            {{ master.description }}
-                        </div>
-
-                    </div>
-
-                {% endfor %}
-
-                <h2 class = "level-1">Undergraduates</h2>
-                {% for undergraduate in undergraduates %}
-
-                    <div class = "team-row" id = "undergraduate-row-{{ forloop.counter }}">
-                        <div class = "picture">
-                            <img src="{{ undergraduate.image.url }}" width = "100" height = "137" class = "img-responsive img-rounded">
-                        </div>
-                        <div class = "professor-name">
-                            <a href = "{{ undergraduate.webpageurl }}">{{ undergraduate.name}}</a>
-                        </div>
-                        <div class = "professor-shortdescription">
-                            {{ undergraduate.occupation }}
-                        </div>
-                        <div class = "professor-description">
-                            {{ undergraduate.description }}
-                        </div>
-
-                    </div>
-
-                {% endfor %}
-
-                <h2 class = "level-2">Staff</h2>
-                {% for staff in staffs%}
-
-                    <div class = "team-row" id = "staff-row-{{ forloop.counter }}">
-                        <div class = "picture">
-                            <img src="{{ staff.image.url }}" width = "100" height = "137" class = "img-responsive img-rounded">
-                        </div>
-                        <div class = "professor-name">
-                            <a href = "{{ staff.webpageurl }}">{{ staff.name}}</a>
-                        </div>
-                        <div class = "professor-shortdescription">
-                            {{ staff.occupation }}
-                        </div>
-                        <div class = "professor-description">
-                            {{ staff.description }}
-                        </div>
-
-                    </div>
-
-                {% endfor %}
-
-                <div class = "alumnitext">Alumni</div>
-
-                {% if postdocsalumni %}
+                <div class = "teamtext">Alumni</div>
+                    {% if postdocsalumni %}
                 <div>
-                    <h2 class = "alumnilevel col-sm-6">Postdocs</h2>
-                    <h2 class = "Currentposition col-sm-5">Current Work</h2>
+                    <h2 class = "col-sm-5" style = "margin-left: -15px;">Postdocs</h2>
+                    <h2 class = "col-sm-5" style = "margin-left: 75px;">Current Work</h2>
                     {%  for postdocalumni in postdocsalumni %}
 
                         <div class = "alumni-row" id = "postdocalumni-row-{{ forloop.counter }}">
@@ -322,19 +195,12 @@
                 </div>
 
                 {% endif %}
-
-
                 </div>
-
             </div>
         </div>
     </div>
 
-
-
-
-
-    <footer class="footer-distributed">
+<footer class="footer-distributed">
         <div class="footer-left">
             <img src = "{% static "psuwebsite/img/footer_logo.png" %}" width = "510" height = "150" >
 				<p class="footer-links">
