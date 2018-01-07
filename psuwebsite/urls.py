@@ -31,7 +31,9 @@ urlpatterns = [
 
     path('publications/', include('publications.urls')),
 
-    path('projects/', include('projects.urls'))
+    path('projects/', include('projects.urls')),
+
+    path('blog/', include('blog.urls'))
 
 
 ] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

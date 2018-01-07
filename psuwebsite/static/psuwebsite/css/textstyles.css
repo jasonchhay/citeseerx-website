@@ -279,3 +279,14 @@ input {
     font-size: 22px;
 
 }
+
+.blogauthor {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: #808080;
+}
+
+.blogtext {
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+}
