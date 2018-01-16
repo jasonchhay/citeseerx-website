@@ -19,7 +19,7 @@ class CurrentTeam(models.Model):
         ('Staff', 'Staff'),
     )
     name = models.CharField(max_length= 200)
-    description = models.CharField(max_length = 1000)
+    description = models.TextField(max_length = 1000)
     webpageurl = models.CharField(max_length = 200)
     image = models.ImageField(upload_to='people_portraits/', default = 'noimage.png')
     occupation = models.CharField(max_length = 25, choices = occupation_choices, default = 'Postdoc')
