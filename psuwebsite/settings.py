@@ -25,7 +25,7 @@ SECRET_KEY = 'uiop@u@1iu7mo1tqouj+d%)z_^xmst*=csv@y)--fn55u3$kyf'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['10.0.0.66','*']
 
 
 # Application definition
@@ -79,13 +79,18 @@ WSGI_APPLICATION = 'psuwebsite.wsgi.application'
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
 DATABASES = {
+    #'default': {
+        #'ENGINE': 'django.db.backends.mysql',
+        #'NAME': 'psuwebsite',
+        #'USER': 'psuuser',
+        #'PASSWORD': 'psuwebsite2017',
+        #'HOST': 'localhost',
+        #'PORT': '5432',
+    #}
+
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'psuwebsite',
-        'USER': 'psuuser',
-        'PASSWORD': 'psuwebsite2017',
-        'HOST': 'localhost',
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
@@ -127,7 +132,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATICFILES_DIRS = (
-    'home/PycharmProjects/psuwebsite/psuwebsite/static',
+    os.path.join(BASE_DIR, 'psuwebsite/static/'),
     os.path.join(BASE_DIR, 'psuwebsite/static/'),
 )
 STATIC_URL = '/static/'
@@ -139,3 +144,10 @@ STATICFILES_FINDERS = (
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+#EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'jasonchhay@gmail.com'
+EMAIL_HOST_PASSWORD = '@1FlItRw'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True

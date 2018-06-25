@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{f98729ca-1d32-4041-8bd0-6dbdf3ef3898}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>manage.py</StartupFile>
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{5F0BE9CA-D677-4A4D-8806-6076C0FAAD37};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Django launcher</LaunchProvider>
+    <InterpreterId>Global|PythonCore|3.6</InterpreterId>
+    <WebBrowserUrl>http://localhost</WebBrowserUrl>
+    <UseIISExpress>true</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="giles.jpg" />
+    <Content Include="media\noimage.png" />
+    <Content Include="media\people_portraits\Jeffery.jpg" />
+    <Content Include="media\professor_portraits\giles.jpg" />
+    <Content Include="media\professor_portraits\jianwu.jpg" />
+    <Content Include="psuwebsite\static\psuwebsite\css\bootstrap.css" />
+    <Content Include="psuwebsite\static\psuwebsite\css\bootstrap.min.css" />
+    <Content Include="psuwebsite\static\psuwebsite\css\content.css" />
+    <Content Include="psuwebsite\static\psuwebsite\css\datatables.css" />
+    <Content Include="psuwebsite\static\psuwebsite\css\font-awesome.min.css" />
+    <Content Include="psuwebsite\static\psuwebsite\css\footer-distributed-with-address-and-phones.css" />
+    <Content Include="psuwebsite\static\psuwebsite\css\navigation.css" />
+    <Content Include="psuwebsite\static\psuwebsite\css\textstyles.css" />
+    <Content Include="psuwebsite\static\psuwebsite\img\ai2_logo.png" />
+    <Content Include="psuwebsite\static\psuwebsite\img\citeseerx.png" />
+    <Content Include="psuwebsite\static\psuwebsite\img\footer_logo.png" />
+    <Content Include="psuwebsite\static\psuwebsite\img\groupphoto.jpg" />
+    <Content Include="psuwebsite\static\psuwebsite\img\ist.jpg" />
+    <Content Include="psuwebsite\static\psuwebsite\img\IST1.jpg" />
+    <Content Include="psuwebsite\static\psuwebsite\img\logo_msr.png" />
+    <Content Include="psuwebsite\static\psuwebsite\img\logo_nasa.png" />
+    <Content Include="psuwebsite\static\psuwebsite\img\New-PSU-Logo.png" />
+    <Content Include="psuwebsite\static\psuwebsite\img\nsf_logo.gif" />
+    <Content Include="psuwebsite\static\psuwebsite\img\psu-logo-2.png" />
+    <Content Include="psuwebsite\static\psuwebsite\img\psu-logo.png" />
+    <Content Include="psuwebsite\static\psuwebsite\img\psu-logo1.png" />
+    <Content Include="psuwebsite\static\psuwebsite\img\psufooterlogo.jpg" />
+    <Content Include="psuwebsite\static\psuwebsite\js\bootstrap.js" />
+    <Content Include="psuwebsite\static\psuwebsite\js\bootstrap.min.js" />
+    <Content Include="psuwebsite\static\psuwebsite\js\datatables.js" />
+    <Content Include="psuwebsite\static\psuwebsite\js\jquery-3.2.1.js" />
+    <Content Include="psuwebsite\static\psuwebsite\js\jquery-3.2.1.min.js" />
+    <Content Include="psuwebsite\templates\psuwebsite\index.html" />
+    <Content Include="templates\base.html" />
+    <Content Include="templates\psuwebsite\alumni.html" />
+    <Content Include="templates\psuwebsite\Blog.html" />
+    <Content Include="templates\psuwebsite\index.html" />
+    <Content Include="templates\psuwebsite\master.html" />
+    <Content Include="templates\psuwebsite\people.html" />
+    <Content Include="templates\psuwebsite\phdstudent.html" />
+    <Content Include="templates\psuwebsite\postdoc.html" />
+    <Content Include="templates\psuwebsite\professors.html" />
+    <Content Include="templates\psuwebsite\projects.html" />
+    <Content Include="templates\psuwebsite\publications.html" />
+    <Content Include="templates\psuwebsite\staff.html" />
+    <Content Include="templates\psuwebsite\undergraduate.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="blog\admin.py" />
+    <Compile Include="blog\apps.py" />
+    <Compile Include="blog\migrations\0001_initial.py" />
+    <Compile Include="blog\migrations\0002_auto_20180107_1938.py" />
+    <Compile Include="blog\migrations\0003_auto_20180107_1939.py" />
+    <Compile Include="blog\migrations\__init__.py" />
+    <Compile Include="blog\models.py" />
+    <Compile Include="blog\tests.py" />
+    <Compile Include="blog\urls.py" />
+    <Compile Include="blog\views.py" />
+    <Compile Include="blog\__init__.py" />
+    <Compile Include="contact\admin.py" />
+    <Compile Include="contact\apps.py" />
+    <Compile Include="contact\migrations\__init__.py" />
+    <Compile Include="contact\forms.py" />
+    <Compile Include="contact\tests.py" />
+    <Compile Include="contact\views.py" />
+    <Compile Include="contact\__init__.py" />
+    <Compile Include="manage.py" />
+    <Compile Include="people\admin.py" />
+    <Compile Include="people\apps.py" />
+    <Compile Include="people\migrations\0001_initial.py" />
+    <Compile Include="people\migrations\0002_auto_20171225_2230.py" />
+    <Compile Include="people\migrations\0003_professor_shortdescription.py" />
+    <Compile Include="people\migrations\0004_auto_20171226_0254.py" />
+    <Compile Include="people\migrations\0005_auto_20171226_0256.py" />
+    <Compile Include="people\migrations\0006_auto_20171226_0305.py" />
+    <Compile Include="people\migrations\0007_auto_20171226_0307.py" />
+    <Compile Include="people\migrations\0008_auto_20171226_0308.py" />
+    <Compile Include="people\migrations\0009_people.py" />
+    <Compile Include="people\migrations\0010_auto_20171226_0350.py" />
+    <Compile Include="people\migrations\0011_auto_20171226_0355.py" />
+    <Compile Include="people\migrations\0012_remove_alumni_image.py" />
+    <Compile Include="people\migrations\0013_alumni_major.py" />
+    <Compile Include="people\migrations\0014_auto_20180116_1849.py" />
+    <Compile Include="people\migrations\__init__.py" />
+    <Compile Include="people\models.py" />
+    <Compile Include="people\tests.py" />
+    <Compile Include="people\urls.py" />
+    <Compile Include="people\views.py" />
+    <Compile Include="people\__init__.py" />
+    <Compile Include="projects\admin.py" />
+    <Compile Include="projects\apps.py" />
+    <Compile Include="projects\migrations\0001_initial.py" />
+    <Compile Include="projects\migrations\0002_auto_20180107_0119.py" />
+    <Compile Include="projects\migrations\0003_auto_20180107_0137.py" />
+    <Compile Include="projects\migrations\0004_auto_20180107_0152.py" />
+    <Compile Include="projects\migrations\0005_auto_20180107_1938.py" />
+    <Compile Include="projects\migrations\__init__.py" />
+    <Compile Include="projects\models.py" />
+    <Compile Include="projects\tests.py" />
+    <Compile Include="projects\urls.py" />
+    <Compile Include="projects\views.py" />
+    <Compile Include="projects\__init__.py" />
+    <Compile Include="psuwebsite\settings.py" />
+    <Compile Include="psuwebsite\urls.py" />
+    <Compile Include="psuwebsite\views.py" />
+    <Compile Include="psuwebsite\wsgi.py" />
+    <Compile Include="psuwebsite\__init__.py" />
+    <Compile Include="publications\admin.py" />
+    <Compile Include="publications\apps.py" />
+    <Compile Include="publications\migrations\0001_initial.py" />
+    <Compile Include="publications\migrations\0002_auto_20171227_2010.py" />
+    <Compile Include="publications\migrations\0003_auto_20180106_2309.py" />
+    <Compile Include="publications\migrations\0004_auto_20180107_1938.py" />
+    <Compile Include="publications\migrations\__init__.py" />
+    <Compile Include="publications\models.py" />
+    <Compile Include="publications\tests.py" />
+    <Compile Include="publications\urls.py" />
+    <Compile Include="publications\validators.py" />
+    <Compile Include="publications\views.py" />
+    <Compile Include="publications\__init__.py" />
+    <Compile Include="venv\bin\activate_this.py" />
+    <Compile Include="venv\bin\django-admin.py" />
+    <Compile Include="venv\bin\enhancer.py" />
+    <Compile Include="venv\bin\explode.py" />
+    <Compile Include="venv\bin\gifmaker.py" />
+    <Compile Include="venv\bin\painter.py" />
+    <Compile Include="venv\bin\pilconvert.py" />
+    <Compile Include="venv\bin\pildriver.py" />
+    <Compile Include="venv\bin\pilfile.py" />
+    <Compile Include="venv\bin\pilfont.py" />
+    <Compile Include="venv\bin\pilprint.py" />
+    <Compile Include="venv\bin\player.py" />
+    <Compile Include="venv\bin\thresholder.py" />
+    <Compile Include="venv\bin\viewer.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="blog" />
+    <Folder Include="blog\migrations" />
+    <Folder Include="contact\" />
+    <Folder Include="contact\migrations\" />
+    <Folder Include="media" />
+    <Folder Include="media\people_portraits" />
+    <Folder Include="media\professor_portraits" />
+    <Folder Include="people" />
+    <Folder Include="people\migrations" />
+    <Folder Include="projects" />
+    <Folder Include="projects\migrations" />
+    <Folder Include="psuwebsite" />
+    <Folder Include="psuwebsite\static\" />
+    <Folder Include="psuwebsite\static\psuwebsite\" />
+    <Folder Include="psuwebsite\static\psuwebsite\css" />
+    <Folder Include="psuwebsite\static\psuwebsite\img" />
+    <Folder Include="psuwebsite\static\psuwebsite\js" />
+    <Folder Include="psuwebsite\templates\" />
+    <Folder Include="psuwebsite\templates\psuwebsite" />
+    <Folder Include="publications" />
+    <Folder Include="publications\migrations" />
+    <Folder Include="templates" />
+    <Folder Include="templates\psuwebsite" />
+    <Folder Include="venv\" />
+    <Folder Include="venv\bin" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="Global|ContinuumAnalytics|Anaconda36-64" />
+    <InterpreterReference Include="Global|PythonCore|3.6" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Django.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:51957/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>True</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

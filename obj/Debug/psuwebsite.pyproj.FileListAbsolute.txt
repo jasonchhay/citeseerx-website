@@ -1,0 +1,5 @@
+E:\psuwebsite\bin\Microsoft.PythonTools.WebRole.dll
+E:\psuwebsite\bin\wfastcgi.py
+D:\psuwebsite\bin\Microsoft.PythonTools.WebRole.dll
+D:\psuwebsite\bin\wfastcgi.py
+D:\psuwebsite\obj\Debug\psuwebsite.pyproj.CoreCompileInputs.cache

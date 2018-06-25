@@ -8372,3 +8372,9 @@ a.text-dark:focus, a.text-dark:hover {
   visibility: hidden !important;
 }
 /*# sourceMappingURL=bootstrap.css.map */
+
+
+h3 {
+    text-align: left;
+    font-weight: bold;
+}

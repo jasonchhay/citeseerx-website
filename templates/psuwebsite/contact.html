@@ -1,0 +1,17 @@
+﻿{% extends 'base.html' %}
+{% load staticfiles %}
+{% block header %}Contact{% endblock %}
+{% block content %}
+
+<script src='https://www.google.com/recaptcha/api.js'></script>
+
+<div class="contact">
+    {{ message }}
+    <form action="." method="post">
+        {{ form.as_p }}
+        {% csrf_token %}
+        <div class="g-recaptcha" data-sitekey="6Ldjh2AUAAAAAD_phO7IVLQQ9BK-enb5Edwqlx8F"></div>
+        <input type="submit" value="Send e-mail" />
+    </form>
+</div>
+{% endblock %}

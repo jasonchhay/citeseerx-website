@@ -19,19 +19,33 @@
 }
 
 .bodytext {
-    padding-top: 15px;
-    padding-bottom: 30px;
+    padding-top: 45px;
+    padding-bottom: 50px;
 }
 
 h2 {
     font-family: 'Roboto', sans-serif;
     font-size: 30px;
+    width: 100%;
+    height: inherit;
+    background-color: #9fb8c3;
+    outline: none;
+    margin-left: -9px;
+    border: none;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    padding: 2px 6px 3px;
 }
 
+.section-header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
 .ptext {
-    margin-top: 15px;
+    margin-bottom: 10px;
     font-size: 18px;
     font-family: 'Roboto', sans-serif;
+    color: #646464;
 }
 
 .peopletitletext {
