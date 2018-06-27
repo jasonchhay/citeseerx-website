@@ -5,13 +5,78 @@
 
 <script src='https://www.google.com/recaptcha/api.js'></script>
 
-<div class="contact">
-    {{ message }}
-    <form action="." method="post">
-        {{ form.as_p }}
-        {% csrf_token %}
-        <div class="g-recaptcha" data-sitekey="6Ldjh2AUAAAAAD_phO7IVLQQ9BK-enb5Edwqlx8F"></div>
-        <input type="submit" value="Send e-mail" />
-    </form>
+<h2 class="section-header"><strong>Contact</strong></h2>
+<div class="contact_info">
+    <div class="ptext">
+        <h3><strong>Help CiteSeer<sup>x</sup> Move Forward</strong></h3>
+        <p>Share your observations, concerns and suggestions for CiteSeerx with the intention of 
+        improving our performance as a scientific literature digital library. Encouraging words regarding anything that we are doing 
+        right will also help us to continue to provide those features you have enjoyed. 
+        When the "Proceed to Verification" button is selected, you will be given the opportunity to approve your message 
+        before submitting it.</p>
+
+        <h3>Related Links</h3>
+        <ul>
+            <li><a href="https://www.psu.edu/copyright-information"><strong><p>DMCA Information</p></strong></a></li>
+            <li><a href="http://www.givenow.psu.edu/CiteseerxFund"><strong><p>Donate</p></strong></a></li>
+        </ul>
+    </div>
 </div>
+<div class="contact_form">
+    <div class="ptext">
+        <form action="." method="post">
+            <div class="ptext">
+        
+        <form action="." method="post">
+            <div class="first_name">
+                <label for="id_first_name">First Name<span class="required">*</span></label>
+                    <input type="text" name="first_name" required="" id="id_first_name" class="name_input">
+            </div>
+            <div class="last_name">
+                <label for="id_last_name">Last Name<span class="required">*</span></label>
+                    <input type="text" name="last_name" required="" id="id_last_name" class="name_input">
+            </div>
+            <label for="id_email">Email<span class="required">*</span></label>
+                <input type="email" name="email" required="" id="id_email" class="long_text_box">
+            <label for="id_subject">Subject<span class="required">*</span></label>
+                <input type="text" name="subject" maxlength="250" required="" id="id_subject" class="long_text_box">
+            <label for="id_content">Body<span class="required">*</span></label>
+                <textarea name="content" cols="45" rows="10" required="" id="id_content"></textarea>
+            {% csrf_token %}
+            <div class="g-recaptcha" data-sitekey="6Ldjh2AUAAAAAD_phO7IVLQQ9BK-enb5Edwqlx8F" data-callback="enableBtn"></div>
+            <input type="submit" id="submit" value="Submit" />
+        </form>
+    </div>
+    
+    <strong>
+        {% if error %}
+            <span class="error">{{ message }}</span>
+        {% else %}
+            {{ message }}
+        {% endif %}
+    </strong>
+</div>
+
+<script>
+    document.getElementById("submit").disabled = true;
+
+    function enableBtn() {
+        document.getElementById("submit").disabled = false;
+    }
+</script>
+<!--
+<div class="dmca">
+    <div class="ptext">
+        <h2>Copyright Information</h2>
+        <p>The information presented on Penn State's Web site comes from a variety of sources, 
+        including not only official Penn State departments and colleges, but also unofficial sources and individuals. 
+        Although every effort is made to present current and accurate information, 
+        the University does not author or edit all of the pages presented here and therefore cannot assume responsibility 
+        for all information. The author of each Web page is responsible for the content of that page and is expected to abide by 
+        University policies and local, state, and federal laws. For more information, see Policies, Guidelines, and Laws.</p>
+    </div>
+</div>-->
+
+
 {% endblock %}
+ 

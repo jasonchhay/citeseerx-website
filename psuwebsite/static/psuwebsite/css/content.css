@@ -30,5 +30,77 @@
 
 /*prevents 'snap' with collapsing item*/
 .well {
-    margin: 0
+    margin: 0;
+}
+
+/*Contact Form CSS*/
+.contact_info {
+    word-wrap: break-word;
+    width: 60%;
+    overflow: hidden;
+    float: left;
+    padding-right: 10%;
+}
+
+.contact_form {
+    margin-top: 10px;
+    float:left;
+}
+
+.g-recaptcha {
+    margin-top:5px;
+    margin-bottom:10px;
+}
+
+.long_text_box {
+    width: 100%;
+}
+
+.name_input {
+    width: 100%;
+
+}
+
+.first_name {
+    float: left;
+    padding-right: 10px;
+}
+
+.last_name {
+    float: left;
+}
+
+input[type="submit"] {
+    padding: 4px;
+    background-color: #9fb8c3;
+    outline: none;
+}
+
+input[type="submit"]:enabled input[type="submit"]:hover {
+    background-color: #80949c;
+}
+
+/*Team CSS*/
+.team {
+    
+}
+.profile {
+    background-color: aqua;
+    width: 325px;
+    height: 375px;
+    border-radius: 30px;
+    text-align: center;
+    display: inline-block;
+    margin: 8px;
+    margin-bottom:0px;
+    overflow: hidden;
+}
+
+.profile img{
+    margin:17px;
+}
+
+.profile h3 {
+    margin-top: 0px;
+    font-size: 20px;
 }

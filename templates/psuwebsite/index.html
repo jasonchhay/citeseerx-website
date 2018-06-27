@@ -3,62 +3,55 @@
 {% block header %}About CiteSeerX{% endblock %}
 
 {% block content %}
-<div class="container bodytext">
-    <div class="row">
-        <section class="col-sm-12 col-md-12 col-lg-12 col-x1-12">
-            <p class="ptext">
-                CiteSeer<sup>x</sup> is an evolving scientific literature digital library and search engine that has focused primarily on the literature in computer and information science. CiteSeer<sup>x</sup> aims to improve the dissemination of scientific literature and to provide improvements in functionality, usability, availability, cost, comprehensiveness, efficiency, and timeliness in the access of scientific and scholarly knowledge.
+<p class="ptext">
+    CiteSeer<sup>x</sup> is an evolving scientific literature digital library and search engine that has focused primarily on the literature in computer and information science. CiteSeer<sup>x</sup> aims to improve the dissemination of scientific literature and to provide improvements in functionality, usability, availability, cost, comprehensiveness, efficiency, and timeliness in the access of scientific and scholarly knowledge.
 
-                Rather than creating just another digital library, CiteSeer<sup>x</sup> attempts to provide resources such as algorithms, data, metadata, services, techniques, and software that can be used to promote other digital libraries. CiteSeer<sup>x</sup> has developed new methods and algorithms to index PostScript and PDF research articles on the Web. Citeseer<sup>x</sup> provides the following features.
-            </p>
-            <h2 class="section-header"><strong>Features</strong></h2>
-            <ul class="ptext">
-                <li class="ptext"><strong>Autonomous citation indexing (ACI)</strong><br /> CiteSeer uses ACI to automatically extract citations and create a citation index that can be used for literature search and evaluation. Compared to traditional citation indices, ACI provides improvements in cost, availability, comprehensiveness, efficiency, and timeliness.</li>
-                <li class="ptext"><strong>Automatic metadata extraction</strong><br /> CiteSeer automatically extracts author, title and other related metadata for analysis and document search.</li>
-                <li class="ptext"><strong>Citation statistics</strong><br /> CiteSeer computes citation statistics and related documents for all articles cited in the database, not just the indexed articles.</li>
-                <li class="ptext"><strong>Reference linking</strong><br /> CiteSeer was the first to allow browsing documents using citation links that are automatically generated.</li>
-                <li class="ptext"><strong>Author disambiguation</strong><br /> Using scalable methods authors are automatically disambiguated from other authors.</li>
-                <li class="ptext"><strong>Citation context</strong><br /> CiteSeer can show the context of citations to a given paper, allowing a researcher to quickly and easily see what other researchers have to say about an article of interest (no longer available).</li>
-                <li class="ptext"><strong>Awareness and tracking</strong><br /> CiteSeer provides automatic notification of new citations to given papers, and new papers matching a user profile.</li>
-                <li class="ptext"><strong>Related documents</strong><br /> CiteSeer locates related documents using citation and word based measures and displays an active and continuously updated bibliography for each document.</li>
-                <li class="ptext"><strong>Full-text indexing</strong><br /> CiteSeer indexes the full-text of the entire articles and citations. Full boolean, phrase and proximity search is supported.</li>
-                <li class="ptext"><strong>Query-sensitive summaries</strong><br /> CiteSeer provides the context of how query terms are used in articles instead of a generic summary, improving the efficiency of search.</li>
-                <li class="ptext"><strong>Up-to-date</strong><br /> CiteSeer is regularly updated based on user submissions and regular crawls.</li>
-                <li class="ptext"><strong>Powerful search</strong><br /> CiteSeer uses fielded search to all complex queries over content, and allows the use of author initials to provide more flexible name search.</li>
-                <li class="ptext"><strong>Harvesting of articles</strong><br /> CiteSeer automatically harvests research papers from the public Web but also accepts submissions through a submission system.</li>
-                <li class="ptext"><strong>Metadata of articles</strong><br /> CiteSeer automatically extracts and provides metadata from all indexed articles.</li>
-                <li class="ptext"><strong>Personal Content Portal</strong><br /> CiteSeer provides certain features such as personal collections, RSS-like notifications, social bookmarking, and social network facilities. Personalized search setting and institutional data tracking is possible. Documents of users can be submitted through an easy to use document submission system</li>
-            </ul>
-            <button data-toggle="collapse" data-target="#history" class="collapsible"><h2><strong>History</strong></h2></button>
-                <div id="history" class="collapse">
-                <div class="ptext">
-                    <p>CiteSeer was the first digital library and search engine to provide automated citation indexing and citation linking by autonomous citation indexing.</p>
-                    <p>CiteSeer was developed in 1997 at the NEC Research Institute, Princeton, New Jersey, by Steve Lawrence, Lee Giles and Kurt Bollacker. The service transitioned to the Pennsylvania State University's College of Information Sciences and Technology in 2003. Since then, the project has been led by Professor Lee Giles.</p>
-                    <p>After serving as a public search engine for nearly ten years, CiteSeer, originally intended as a prototype only, began to scale beyond the capabilities of its original architecture. Since its inception, the original CiteSeer grew to index over 750,000 documents and served over 1.5 million requests daily, pushing the limits of the system's capabilities. Based on an analysis of problems encountered by the original system and the needs of the research community, a new architecture and data model was developed for the "Next Generation CiteSeer," or CiteSeerx, in order to continue the CiteSeer legacy into the foreseeable future.</p>
-                </div>
-                </div>
-            <button data-toggle="collapse" data-target="#acknowledgements" class="collapsible"><h2><strong>Acknowledgements</strong></h2></button>
-                <div id="acknowledgements" class="collapse">
-                <div class="ptext">
-                    <p>Test.</p>
-                    
-                </div>
-                </div>
-            <h2 class="section-header"><strong>Sponsors</strong></h2>
-            <p class="ptext">
-                We are very thankful for the generous support that our sponsors have provided. In particular, CiteSeerx would not exist without their support.
-                <br /><strong>If there is any interest in sponsoring CiteSeerx, <a href="http://clgiles.ist.psu.edu/">please contact Professor Giles.</a></strong>
-            </p>
-            <div class="sponsor_text">
-                <h3 class="ptext">Current Sponsors</h3>
-                    <a href="https://allenai.org/"><img src={% static "psuwebsite/img/ai2_logo.png" %} title="Allen Institute for Artificial Intelligence" class="sponsors" /></a>
-                <h3 class="ptext">Previous Sponsors</h3>
-                    <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=0958143"><img src={% static "psuwebsite/img/nsf_logo.gif" %} title="The National Science Foundation" class="sponsors" /></a>
-                    <a href="http://research.microsoft.com/"><img src={% static "psuwebsite/img/logo_msr.png" %} title="Microsoft Research" class="sponsors" /></a>
-                    <a href="https://www.nasa.gov/"><img src={% static "psuwebsite/img/logo_nasa.png" %} title="The National Aeronautics and Space Administration" class="sponsors" /></a>
-            </div>
-        </section>
-
+    Rather than creating just another digital library, CiteSeer<sup>x</sup> attempts to provide resources such as algorithms, data, metadata, services, techniques, and software that can be used to promote other digital libraries. CiteSeer<sup>x</sup> has developed new methods and algorithms to index PostScript and PDF research articles on the Web. Citeseer<sup>x</sup> provides the following features.
+</p>
+<h2 class="section-header"><strong>Features</strong></h2>
+<ul class="ptext">
+    <li class="ptext"><strong>Autonomous citation indexing (ACI)</strong><br /> CiteSeer uses ACI to automatically extract citations and create a citation index that can be used for literature search and evaluation. Compared to traditional citation indices, ACI provides improvements in cost, availability, comprehensiveness, efficiency, and timeliness.</li>
+    <li class="ptext"><strong>Automatic metadata extraction</strong><br /> CiteSeer automatically extracts author, title and other related metadata for analysis and document search.</li>
+    <li class="ptext"><strong>Citation statistics</strong><br /> CiteSeer computes citation statistics and related documents for all articles cited in the database, not just the indexed articles.</li>
+    <li class="ptext"><strong>Reference linking</strong><br /> CiteSeer was the first to allow browsing documents using citation links that are automatically generated.</li>
+    <li class="ptext"><strong>Author disambiguation</strong><br /> Using scalable methods authors are automatically disambiguated from other authors.</li>
+    <li class="ptext"><strong>Citation context</strong><br /> CiteSeer can show the context of citations to a given paper, allowing a researcher to quickly and easily see what other researchers have to say about an article of interest (no longer available).</li>
+    <li class="ptext"><strong>Awareness and tracking</strong><br /> CiteSeer provides automatic notification of new citations to given papers, and new papers matching a user profile.</li>
+    <li class="ptext"><strong>Related documents</strong><br /> CiteSeer locates related documents using citation and word based measures and displays an active and continuously updated bibliography for each document.</li>
+    <li class="ptext"><strong>Full-text indexing</strong><br /> CiteSeer indexes the full-text of the entire articles and citations. Full boolean, phrase and proximity search is supported.</li>
+    <li class="ptext"><strong>Query-sensitive summaries</strong><br /> CiteSeer provides the context of how query terms are used in articles instead of a generic summary, improving the efficiency of search.</li>
+    <li class="ptext"><strong>Up-to-date</strong><br /> CiteSeer is regularly updated based on user submissions and regular crawls.</li>
+    <li class="ptext"><strong>Powerful search</strong><br /> CiteSeer uses fielded search to all complex queries over content, and allows the use of author initials to provide more flexible name search.</li>
+    <li class="ptext"><strong>Harvesting of articles</strong><br /> CiteSeer automatically harvests research papers from the public Web but also accepts submissions through a submission system.</li>
+    <li class="ptext"><strong>Metadata of articles</strong><br /> CiteSeer automatically extracts and provides metadata from all indexed articles.</li>
+    <li class="ptext"><strong>Personal Content Portal</strong><br /> CiteSeer provides certain features such as personal collections, RSS-like notifications, social bookmarking, and social network facilities. Personalized search setting and institutional data tracking is possible. Documents of users can be submitted through an easy to use document submission system</li>
+</ul>
+<button data-toggle="collapse" data-target="#history" class="collapsible"><h2><strong>History</strong></h2></button>
+    <div id="history" class="collapse">
+    <div class="ptext">
+        <p>CiteSeer was the first digital library and search engine to provide automated citation indexing and citation linking by autonomous citation indexing.</p>
+        <p>CiteSeer was developed in 1997 at the NEC Research Institute, Princeton, New Jersey, by Steve Lawrence, Lee Giles and Kurt Bollacker. The service transitioned to the Pennsylvania State University's College of Information Sciences and Technology in 2003. Since then, the project has been led by Professor Lee Giles.</p>
+        <p>After serving as a public search engine for nearly ten years, CiteSeer, originally intended as a prototype only, began to scale beyond the capabilities of its original architecture. Since its inception, the original CiteSeer grew to index over 750,000 documents and served over 1.5 million requests daily, pushing the limits of the system's capabilities. Based on an analysis of problems encountered by the original system and the needs of the research community, a new architecture and data model was developed for the "Next Generation CiteSeer," or CiteSeerx, in order to continue the CiteSeer legacy into the foreseeable future.</p>
     </div>
+    </div>
+<button data-toggle="collapse" data-target="#acknowledgements" class="collapsible"><h2><strong>Acknowledgements</strong></h2></button>
+    <div id="acknowledgements" class="collapse">
+    <div class="ptext">
+        <p>Test.</p>
+                    
+    </div>
+    </div>
+<h2 class="section-header"><strong>Sponsors</strong></h2>
+<p class="ptext">
+    We are very thankful for the generous support that our sponsors have provided. In particular, CiteSeerx would not exist without their support.
+    <br /><strong>If there is any interest in sponsoring CiteSeerx, <a href="http://clgiles.ist.psu.edu/">please contact Professor Giles.</a></strong>
+</p>
+<div class="sponsor_text">
+    <h3 class="ptext">Current Sponsors</h3>
+        <a href="https://allenai.org/"><img src={% static "psuwebsite/img/ai2_logo.png" %} title="Allen Institute for Artificial Intelligence" class="sponsors" /></a>
+    <h3 class="ptext">Previous Sponsors</h3>
+        <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=0958143"><img src={% static "psuwebsite/img/nsf_logo.gif" %} title="The National Science Foundation" class="sponsors" /></a>
+        <a href="http://research.microsoft.com/"><img src={% static "psuwebsite/img/logo_msr.png" %} title="Microsoft Research" class="sponsors" /></a>
+        <a href="https://www.nasa.gov/"><img src={% static "psuwebsite/img/logo_nasa.png" %} title="The National Aeronautics and Space Administration" class="sponsors" /></a>
 </div>
 {% endblock %}

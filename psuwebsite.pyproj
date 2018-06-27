@@ -22,10 +22,14 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="giles.jpg" />
-    <Content Include="media\noimage.png" />
+    <Content Include="psuwebsite\static\psuwebsite\img\headprofiles\noimage.png" />
     <Content Include="media\people_portraits\Jeffery.jpg" />
     <Content Include="media\professor_portraits\giles.jpg" />
     <Content Include="media\professor_portraits\jianwu.jpg" />
+    <Content Include="people\management\.DS_Store" />
+    <Content Include="people\management\._.DS_Store" />
+    <Content Include="people\management\commands\.DS_Store" />
+    <Content Include="people\management\commands\._.DS_Store" />
     <Content Include="psuwebsite\static\psuwebsite\css\bootstrap.css" />
     <Content Include="psuwebsite\static\psuwebsite\css\bootstrap.min.css" />
     <Content Include="psuwebsite\static\psuwebsite\css\content.css" />
@@ -90,6 +94,7 @@
     <Compile Include="manage.py" />
     <Compile Include="people\admin.py" />
     <Compile Include="people\apps.py" />
+    <Compile Include="people\management\commands\load_team_data.py" />
     <Compile Include="people\migrations\0001_initial.py" />
     <Compile Include="people\migrations\0002_auto_20171225_2230.py" />
     <Compile Include="people\migrations\0003_professor_shortdescription.py" />
@@ -165,6 +170,8 @@
     <Folder Include="media\people_portraits" />
     <Folder Include="media\professor_portraits" />
     <Folder Include="people" />
+    <Folder Include="people\management\" />
+    <Folder Include="people\management\commands\" />
     <Folder Include="people\migrations" />
     <Folder Include="projects" />
     <Folder Include="projects\migrations" />
@@ -173,6 +180,7 @@
     <Folder Include="psuwebsite\static\psuwebsite\" />
     <Folder Include="psuwebsite\static\psuwebsite\css" />
     <Folder Include="psuwebsite\static\psuwebsite\img" />
+    <Folder Include="psuwebsite\static\psuwebsite\img\headprofiles\" />
     <Folder Include="psuwebsite\static\psuwebsite\js" />
     <Folder Include="psuwebsite\templates\" />
     <Folder Include="psuwebsite\templates\psuwebsite" />

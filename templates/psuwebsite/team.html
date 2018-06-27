@@ -1,0 +1,43 @@
+﻿{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+
+<div class="team" align="center">
+
+    <div class="core_team">
+        <h2 class="section-header"><strong>The Core Team</strong></h2>
+        {% for person in coreteam %}
+        <div class="profile">
+            <img src="{{ person.image.url }}" alt="img">
+            <h3>{{ person.fullname }}</h3>
+            <h4>{{ person.role }}</h4>
+            <p class="ptext">{{ person.description }}</p>
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="core_team">
+        <h2 class="section-header"><strong>Noted Contributors</strong></h2>
+        {% for person in contributors %}
+        <div class="profile">
+            <img src="{{ person.image.url }}" alt="img">
+            <h3>{{ person.fullname }}</h3>
+            <h4>{{ person.role }}</h4>
+            <p class="ptext">{{ person.description }}</p>
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="core_team">
+        <h2 class="section-header"><strong>Founders</strong></h2>
+        {% for person in founders %}
+        <div class="profile">
+            <img src="{{ person.image.url }}" alt="img">
+            <h3>{{ person.fullname }}</h3>
+            <h4>{{ person.role }}</h4>
+            <p class="ptext">{{ person.description }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

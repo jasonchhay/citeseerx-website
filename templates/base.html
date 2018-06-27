@@ -32,14 +32,15 @@
     </a> <div class="psunav">
         <ul>
             <!-- About -->
-            <li class="li-1"><a href="/home"><div class="colorchange active-choice">About</div></a></li>
+            <!--<li class="li-1"><a href="/home"><div class="colorchange active-choice">About</div></a></li>-->
+            <li class="li-1"><a href="/home"><div class="colorchange">About</div></a></li>
             <!-- People Dropdown -->
             <li class="li-2">
                 <div class="colorchange"><button class="dropbtn" id="dropbtn-people"disabled>
                     People <i class="fa fa-caret-down"></i>
                     <div class="dropmenu-content" id="dropmenu-content-people">
-                        <a href="/team">Team</a>
-                        <a href="/collaborators">Collaborators</a>
+                        <a href="/people/team">Team</a>
+                        <a href="/people/collaborators">Collaborators</a>
                     </div>
                 </button>
                 </div>
@@ -72,8 +73,14 @@
             </header>
         </div>
         <div class="pagebody">
-            {% block content %}
-            {% endblock %}
+            <div class="container bodytext">
+                <div class="row">
+                    <section class="col-sm-12 col-md-12 col-lg-12 col-x1-12">
+                        {% block content %}
+                        {% endblock %}
+                    </section>
+                </div>
+            </div>
         </div>
         <footer class="footer-distributed">
             <div class="footer-left">
