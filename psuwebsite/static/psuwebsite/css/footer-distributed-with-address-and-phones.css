@@ -51,6 +51,11 @@
 	color:  inherit;
 }
 
+.footer-links a:hover {
+    border-bottom: 2px solid;
+    margin-bottom: -2px;
+    color: white;
+}
 .footer-distributed .footer-company-name{
 	color:  #8f9296;
 	font-size: 14px;

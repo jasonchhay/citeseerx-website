@@ -1,0 +1,75 @@
+﻿{% extends 'base.html' %}
+{% block header %}Help{% endblock %}
+
+{% block content %}
+<div id="content-container" class="no-sidebar">
+                            
+<div id="node-20" class="node clear-block">
+
+  <div class="meta">
+  
+    </div>
+
+  <div class="content">
+        <h2 class="section-header">Searching CiteSeerX Effectively</h2>
+        <div class="ptext">
+            <ul>
+              <li>Document search is selected by default. To search for a specific author, select the Author button.</li>
+              <li>type the topic or name you are searching for into the textbox</li>
+              <li>check the "Include Citations" box (optional)</li>
+              <li>and select the "Search" button or hit the "enter" key.</li>
+            </ul>
+
+            <h3 class="section-header">Document Searches</h3>
+            <p>CiteSeer<sup>x</sup> uses <a href="http://lucene.apache.org/solr/" target="_blank">Solr</a> as its core search engine. Solr is based upon <a href="http://lucene.apache.org/" target="_blank">Lucene</a>; a good overview of the supported query syntax may be obtained by reading the <a href="http://lucene.apache.org/java/2_3_2/queryparsersyntax.html" target="_blank">Lucene query parser syntax</a>.</p>
+
+            <p>CiteSeer<sup>x</sup> supports complex queries based on the following fields:</p>
+            <ul>
+              <li><strong>title:</strong> paper title</li>
+              <li><strong>author:</strong> paper authors</li>
+              <li><strong>affil:</strong> affiliations of paper authors</li>
+              <li><strong>venue:</strong> place of publication, such as journal or conference name</li>
+              <li><strong>year:</strong> paper year</li>
+              <li><strong>abstract:</strong> paper abstract</li>
+              <li><strong>keyword:</strong> keywords identified from paper headers</li>
+              <li><strong>tag:</strong> user-supplied tags added to a paper</li>
+              <li><strong>text:</strong> article body text</li>
+            </ul>
+
+            <p>For example,</p>
+            <p><strong>venue:"journal of the acm" AND author:"j kleinberg"</strong></p>
+            <p>By default (if no fields are specified) CiteSeer<sup>x</sup> will search the title, author, abstract, and text fields in parallel.</p>
+
+            <h3 class="section-header">Author Searches</h3>
+            <p>CiteSeer<sup>x</sup> supports Proximity and Boolean queries. Please note that adjacent words will default to one word proximity.</p>
+            <p>For example, an author search using a full name may not return complete results.</p>
+            <p><strong>NOT GOOD:</strong> jon kleinberg</p>
+            <p>This will not return all records authored by Jon Kleinberg. Rather, it will only return records for which the first name "Jon" is included unabbreviated.</p>
+            <p>In author searches, it may be better to use the last name only or the first initial and the last name; i.e.,
+            </p>
+            <p><strong>GOOD:</strong> kleinberg<br>
+              <strong>BETTER:</strong> j kleinberg</p>
+  
+            <p>Due to author normalizations included within the CiteSeer<sup>x</sup> index, the latter query will match authors listed as "J Kleinberg", "Jon Kleinberg", and even "Jon M Kleinberg"</p>
+
+            <h3 class="section-header">Citation Searches</h3>
+            <p>Unlike the old CiteSeer system, citations and full documents are included within the same index in CiteSeer<sup>x</sup>. By default, citations for which we have no accompanying document file will not show up in search results. If it is desirable to include these records in search results, simply check the "Include Citations" checkbox on the search form.</p>
+
+            <h3 class="section-header">Search Plugins</h3>
+            <p>CiteSeer<sup>x</sup> offers three Search plugins for browsers which supports the <a href="http://www.opensearch.org/" target="_blank">Open Search</a> 1.1 specification. To add a plugin just click over it.</p>
+            <ul>
+              <li><a href="http://citeseerx.ist.psu.edu/search_plugins/citeseerx_general.xml">CiteSeerx general search plugin</a></li>
+              <li><a href="http://citeseerx.ist.psu.edu/search_plugins/citeseerx_author.xml">CiteSeerx author search plugin</a></li>
+              <li><a href="http://citeseerx.ist.psu.edu/search_plugins/citeseerx_title.xml">CiteSeerx title search plugin</a></li>
+            </ul>
+
+            <h3 class="section-header">Capitalization Does Not Matter</h3>
+            <p>CiteSeer<sup>x</sup> is NOT case sensitive. All letters, regardless of how you type them, will be understood as lower case. For example, searches for "bollacker", "Bollacker", and "bOlLaCkEr" will all return the same results.</p>
+
+            <h3 class="section-header">Table Search</h3>
+            <p>CiteSeer<sup>x</sup> allows the user to search for tables embedded in documents. Users can search for keywords and text in snippets in or around the tables.</p>  </div>
+
+        </div>              
+    </div>                
+</div>
+{% endblock %}

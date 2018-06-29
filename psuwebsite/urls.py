@@ -27,15 +27,19 @@ urlpatterns = [
 
     path('home', views.index, name = 'home'),
 
+    path('privacy-policy/', views.privacy_policy, name='privacy-policy'),
+
+    path('help/', views.help ,name='help'),
+
     path('people/', include('people.urls')),
 
     path('publications/', include('publications.urls')),
 
-    path('projects/', include('projects.urls')),
-
-    path('blog/', include('blog.urls')),
-
     path('contact/', include('contact.urls')),
+
+    path('data/', include('data.urls')), 
+
+    path('scholarly-information-extraction/', include('sie.urls'))
 
 ] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
 

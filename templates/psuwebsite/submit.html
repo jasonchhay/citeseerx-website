@@ -1,0 +1,81 @@
+﻿{% extends 'base.html' %}
+{% block header %}Submitting Documents{% endblock %}
+
+
+
+{% block content %}
+<script src='https://www.google.com/recaptcha/api.js' async defer></script>
+
+<div class="content">
+    <div class="ptext">
+        <h3>Crawling for Authors:</h3>
+        <p>Users are encouraged to submit content that they deem appropriate to the CiteSeer<sup>x</sup> collection. CiteSeerX crawls and indexes documents that are freely and publicly available on the Web. </p>
+        <p>If you do not want your documents crawled by CiteSeer<sup>x</sup>, please use a <i>robots.txt</i> to disallow our crawler named <i>citeseerxbot</i>.</p>
+        <p>We require that all content be submitted through links to publicly accessible documents on the Web. Please make sure you have provided relevant permissions and your <i>robots.txt</i> permits documents to be crawled by our bot <i>citeseerxbot</i>. Once we receive a link submission, that link will be queued for crawling and processed dynamically. Allow several weeks before the documents are indexed by CiteSeer<sup>x</sup>.</p>
+        <h3>Crawling for Open-Access Publishers, Venues, and Repositories</h3>
+        <p>Thank you for requesting that CiteSeer<sup>x</sup> crawl and index
+        your papers. It is important to note that CiteSeer<sup>x</sup> indexes papers, not
+        venues. Please insure the following: </p>
+        <ul>
+          <li> Make sure that your papers are in PDF. These documents should be
+        freely available to anyone that visits your site without any login
+        credentials. Currently, CiteSeer<sup>x</sup> only indexes papers written in
+        English. </li>
+          <li> In order for CiteSeer to crawl your site, please edit your <i>robots.txt</i> file to allow our crawler to download your papers. The content of <i>robots.txt</i> should be either
+            <blockquote>User-agent:*<br> Disallow:</blockquote>
+        to allow any crawler to completely crawl your site or
+            <blockquote>User-agent: citeseerxbot<br> Allow: /yourdirectory/</blockquote>
+        The latter will specifically allow our crawler, <i>citeseerxbot</i>, to crawl the files in <i>/yourdirectory/</i>. </li>
+          <li>We prefer a list of URLs that directly link to your PDF files. You can also generate a sitemap which contains URLs of PDF files. This
+        speeds up downloads. </li>
+          <li>If you cannot provide direct links to the PDF files, then please provide a <i>direct link URL to the archive(s) of all of your papers</i>.
+          </li>
+          <li>Once crawled, your papers will then have metadata extracted, parsed, and imported into our database and then indexed. Please allow at least a week for your papers to appear in CiteSeer<sup>x</sup>. If you do not see your papers after two weeks, please contact us. </li>
+        </ul>
+          <p><sup>*</sup>Publishers <a target="_blank" href="http://www.sherpa.ac.uk/romeo/">policy</a> on self-archiving of your publications.</p>
+
+        <div class="file_formats">
+            <h3>Supported File Formats</h3>
+            <ul>
+            <li><strong>PDF:</strong> (Recommended) We are generally able to convert PDF documents in such a way as to preserve UTF-8 character codes. Therefore, we recommend submitting content in this format particulary if your files contain characters that cannot be correctly represented within the ASCII character set.</li>
+            <li><strong>PS:</strong> We do support PostScript files; however, text conversion will be limited to ASCII-only due to limitations in standard PostScript text extractors.</li>
+            <li><strong>ZIP | GZ | Z:</strong> Common compression formats such as zip, gzip, and UNIX compress are all supported.</li>
+            </ul>
+        </div>
+
+        <div class="submit_form">
+            <div class="ptext">
+
+                <form action="/data/submit" method="post">
+                    <div class="first_name">
+                        <label for="id_first_name">First Name<span class="required">*</span></label>
+                            <input type="text" name="first_name" required="" id="id_first_name" class="name_input">
+                    </div>
+                    <div class="last_name">
+                        <label for="id_last_name">Last Name<span class="required">*</span></label>
+                            <input type="text" name="last_name" required="" id="id_last_name" class="name_input">
+                    </div>
+
+                    <label for="id_email">Email<span class="required">*</span></label>
+                        <input type="email" name="email" required="" id="id_email" class="long_text_box">
+                    <label for="id_url">URL<span class="required">*</span></label>
+                        <input type="text" name="url" maxlength="250" required="" id="id_url" class="long_text_box">
+                    {% csrf_token %}
+                    <div class="g-recaptcha" data-sitekey="6Ldjh2AUAAAAAD_phO7IVLQQ9BK-enb5Edwqlx8F" data-callback="enableBtn"></div>
+                    <input type="submit" id="submit" value="Submit" />
+                </form>
+            </div>
+    
+            <strong>
+                {% if error %}
+                    <span class="error">{{ message }}</span>
+                {% else %}
+                    {{ message }}
+                {% endif %}
+            </strong>
+        </div>
+
+        <br>
+    </div>
+</div>
+{% endblock %}

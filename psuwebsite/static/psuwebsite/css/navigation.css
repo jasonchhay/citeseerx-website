@@ -21,10 +21,10 @@
 }
 
 .colorchange:hover {
-    //border-bottom: 3px solid #fff;
     color: #fff;
 }
 
+/*
 a {
     text-decoration: none;
 }
@@ -33,7 +33,7 @@ a:hover {
     text-decoration: none;
 }
 
-/*
+
 a:hover {
     border-bottom: 0px;
 }
@@ -61,7 +61,7 @@ a:hover {
 * {
     box-sizing: border-box;
 }
-
+/*
 @keyframes slideInFromLeft {
   0% {
     transform: translateX(-100%);
@@ -72,13 +72,13 @@ a:hover {
 }
 
 header {
-    animation-duration: 1s; /* the duration of the animation */
-    animation-timing-function: ease-out; /* how the animation will behave */
-    animation-delay: 0s; /* how long to delay the animation from starting */
-    animation-iteration-count: 1; /* how many times the animation will play */
-    animation-name: slideInFromLeft; /* the name of the animation we defined above */
+    animation-duration: 1s; /* the duration of the animation 
+    animation-timing-function: ease-out; /* how the animation will behave 
+    animation-delay: 0s; /* how long to delay the animation from starting 
+    animation-iteration-count: 1; /* how many times the animation will play 
+    animation-name: slideInFromLeft; /* the name of the animation we defined above 
 }
-
+*/
 .backgroundimage {
     background-size: cover;
     background-repeat: no-repeat;

@@ -1,6 +1,6 @@
 .sponsors {
     width: 125px;
-    height: 125px;
+    margin-right: 5px;
 }
 
 /*collapsables*/
@@ -12,7 +12,7 @@
     margin-left: -10px;
     border: none;
     margin-bottom: 10px;
-    padding: 0px 6px;
+    padding: 0 6px;
 }
 
 .collapsible:hover {
@@ -50,6 +50,7 @@
 .g-recaptcha {
     margin-top:5px;
     margin-bottom:10px;
+    height: inherit;
 }
 
 .long_text_box {
@@ -81,26 +82,101 @@ input[type="submit"]:enabled input[type="submit"]:hover {
 }
 
 /*Team CSS*/
-.team {
-    
+
+.teams {
+    display: inline-block;
+    padding: 0px;
+    left: 100px;
+    right: 100px;
+    position: static;
 }
+
+.group {
+    margin-bottom: 40px;
+}
+
 .profile {
-    background-color: aqua;
+    background-color: #dbe9ec;
     width: 325px;
     height: 375px;
     border-radius: 30px;
     text-align: center;
     display: inline-block;
     margin: 8px;
-    margin-bottom:0px;
+    margin-bottom: 0px;
     overflow: hidden;
-}
-
-.profile img{
-    margin:17px;
 }
 
 .profile h3 {
     margin-top: 0px;
+    margin-bottom: 0px;
     font-size: 20px;
+}
+
+.profile h4 {
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+.image-cropper {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 25%;
+    display: inline-block;
+    text-align: center;
+    margin: 12px;
+}
+
+.image-cropper img {
+    display: inline;
+    /*
+    margin: auto;
+    height: auto%;
+    width: 100%;
+    */
+}
+
+.profile-text {
+    display: inline-block;
+    margin: auto;
+}
+
+.profile-text p {
+    font-size: 16px;
+    padding: 2px;
+}
+
+.profile-content {
+    margin: 0px 4px 0px 4px;
+    text-align: center;
+    display: block;
+    height: auto;
+    width: auto;
+}
+
+/* Submit Form CSS*/
+.file_formats {
+    word-wrap: break-word;
+    width: 60%;
+    overflow: hidden;
+    float: left;
+    padding-right: 10%;
+}
+
+.submit_form {
+    float: left;
+}
+
+/*Features CSS*/
+.column {
+    width: 40%;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 auto;
+}
+.column ul li {
+    list-style-type: none;
+    text-align: left;
 }

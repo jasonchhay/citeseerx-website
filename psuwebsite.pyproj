@@ -21,6 +21,7 @@
     <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="data\templates\index.html" />
     <Content Include="giles.jpg" />
     <Content Include="psuwebsite\static\psuwebsite\img\headprofiles\noimage.png" />
     <Content Include="media\people_portraits\Jeffery.jpg" />
@@ -58,19 +59,16 @@
     <Content Include="psuwebsite\static\psuwebsite\js\jquery-3.2.1.js" />
     <Content Include="psuwebsite\static\psuwebsite\js\jquery-3.2.1.min.js" />
     <Content Include="psuwebsite\templates\psuwebsite\index.html" />
+    <Content Include="sie\templates\index.html" />
     <Content Include="templates\base.html" />
-    <Content Include="templates\psuwebsite\alumni.html" />
-    <Content Include="templates\psuwebsite\Blog.html" />
+    <Content Include="templates\psuwebsite\help.html" />
     <Content Include="templates\psuwebsite\index.html" />
-    <Content Include="templates\psuwebsite\master.html" />
     <Content Include="templates\psuwebsite\people.html" />
-    <Content Include="templates\psuwebsite\phdstudent.html" />
-    <Content Include="templates\psuwebsite\postdoc.html" />
-    <Content Include="templates\psuwebsite\professors.html" />
-    <Content Include="templates\psuwebsite\projects.html" />
+    <Content Include="templates\psuwebsite\privacy-policy.html" />
     <Content Include="templates\psuwebsite\publications.html" />
-    <Content Include="templates\psuwebsite\staff.html" />
-    <Content Include="templates\psuwebsite\undergraduate.html" />
+    <Content Include="templates\psuwebsite\download.html" />
+    <Content Include="templates\psuwebsite\submit.html" />
+    <Content Include="templates\psuwebsite\scholarly-information-extraction.html" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="blog\admin.py" />
@@ -91,6 +89,19 @@
     <Compile Include="contact\tests.py" />
     <Compile Include="contact\views.py" />
     <Compile Include="contact\__init__.py" />
+    <Compile Include="data\admin.py" />
+    <Compile Include="data\apps.py" />
+    <Compile Include="data\forms.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="data\urls.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="data\migrations\__init__.py" />
+    <Compile Include="data\models.py" />
+    <Compile Include="data\tests.py" />
+    <Compile Include="data\views.py" />
+    <Compile Include="data\__init__.py" />
     <Compile Include="manage.py" />
     <Compile Include="people\admin.py" />
     <Compile Include="people\apps.py" />
@@ -146,6 +157,16 @@
     <Compile Include="publications\validators.py" />
     <Compile Include="publications\views.py" />
     <Compile Include="publications\__init__.py" />
+    <Compile Include="sie\admin.py" />
+    <Compile Include="sie\apps.py" />
+    <Compile Include="sie\migrations\__init__.py" />
+    <Compile Include="sie\models.py" />
+    <Compile Include="sie\urls.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sie\tests.py" />
+    <Compile Include="sie\views.py" />
+    <Compile Include="sie\__init__.py" />
     <Compile Include="venv\bin\activate_this.py" />
     <Compile Include="venv\bin\django-admin.py" />
     <Compile Include="venv\bin\enhancer.py" />
@@ -166,6 +187,9 @@
     <Folder Include="blog\migrations" />
     <Folder Include="contact\" />
     <Folder Include="contact\migrations\" />
+    <Folder Include="data\" />
+    <Folder Include="data\migrations\" />
+    <Folder Include="data\templates\" />
     <Folder Include="media" />
     <Folder Include="media\people_portraits" />
     <Folder Include="media\professor_portraits" />
@@ -182,10 +206,14 @@
     <Folder Include="psuwebsite\static\psuwebsite\img" />
     <Folder Include="psuwebsite\static\psuwebsite\img\headprofiles\" />
     <Folder Include="psuwebsite\static\psuwebsite\js" />
+    <Folder Include="psuwebsite\static\psuwebsite\pdf\" />
     <Folder Include="psuwebsite\templates\" />
     <Folder Include="psuwebsite\templates\psuwebsite" />
     <Folder Include="publications" />
     <Folder Include="publications\migrations" />
+    <Folder Include="sie\" />
+    <Folder Include="sie\migrations\" />
+    <Folder Include="sie\templates\" />
     <Folder Include="templates" />
     <Folder Include="templates\psuwebsite" />
     <Folder Include="venv\" />
