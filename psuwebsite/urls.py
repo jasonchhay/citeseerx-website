@@ -37,7 +37,7 @@ urlpatterns = [
 
     path('contact/', include('contact.urls')),
 
-    path('data/', include('data.urls')), 
+    path('downloads/', include('downloads.urls')), 
 
     path('scholarly-information-extraction/', include('sie.urls'))
 

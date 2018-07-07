@@ -4,17 +4,27 @@
 }
 
 /*collapsables*/
-.collapsible {
-    width: 100%;
-    height: inherit;
+
+
+.collapse-panel {
+    width: 102%;
     background-color: #9fb8c3;
     outline: none;
     margin-left: -10px;
     border: none;
     margin-bottom: 10px;
     padding: 0 6px;
+    overflow: hidden;
 }
 
+.collapse-panel:hover {
+    background-color: #80949c;
+}
+
+.collapse-header {
+    padding-bottom: 10px;
+}
+/*
 .collapsible:hover {
     background-color: #80949c;
 }
@@ -23,25 +33,69 @@
     background-color: transparent;
     margin-top: 10px;
     margin-bottom: 10px;
-    padding:0px;
     margin-left: 0px;
     text-align: left;
 }
 
-/*prevents 'snap' with collapsing item*/
-.well {
-    margin: 0;
+.collapsible strong {
+    float: left;
+}
+.collapsible i {
+    float: right;
 }
 
+    */
+
+.collapsible:after {
+    content:"";
+    color: black;
+}
+
+.collapse-text {
+    float: left;
+}
+
+.collapse-panel i {
+    float: right;
+}
+.collapsible:after .fa-chevron-up {
+    display: inline;
+}
+
+.collapsible:after .fa-chevron-down {
+    content: "";
+    display: none;
+}
+    /*prevents 'snap' with collapsing item*/
+    .well {
+        margin: 0;
+    }
+
+.collapse-panel .collapse:after {
+    /* symbol for "opening" panels */
+    font-family: 'Glyphicons Halflings'; /* essential for enabling glyphicon */
+    content: "\e114"; /* adjust as needed, taken from bootstrap.css */
+    float: right; /* adjust as needed */
+    color: grey; /* adjust as needed */
+    background-color: black;
+}
+
+.collapse-panel .collapse.collapsed:after {
+    /* symbol for "collapsed" panels */
+    content: "\e080"; /* adjust as needed, taken from bootstrap.css */
+}
 /*Contact Form CSS*/
 .contact_info {
     word-wrap: break-word;
-    width: 60%;
+    width: 50%;
     overflow: hidden;
     float: left;
-    padding-right: 10%;
+    padding-right: 5%;
 }
 
+.contact_info li {
+    vertical-align: top;
+}
 .contact_form {
     margin-top: 10px;
     float:left;
@@ -65,10 +119,12 @@
 .first_name {
     float: left;
     padding-right: 10px;
+    width: 50%;
 }
 
 .last_name {
     float: left;
+    width: 50%;
 }
 
 input[type="submit"] {
@@ -96,26 +152,42 @@ input[type="submit"]:enabled input[type="submit"]:hover {
 }
 
 .profile {
-    background-color: #dbe9ec;
-    width: 325px;
-    height: 375px;
-    border-radius: 30px;
+    background-color: #e0e6e8;
+    width: inherit;
+    height: 200px;
+    border-radius: 15px;
+    padding: 12px;
     text-align: center;
     display: inline-block;
     margin: 8px;
     margin-bottom: 0px;
     overflow: hidden;
+    -webkit-transition: .25s;
+    -moz-transition: .25s;
+    -o-transition: .25s;
+    transition: .25s;
 }
 
+.profile-link a {
+    text-decoration: none;
+}
+a:hover .profile {
+    background-color: #cbcfd0;
+    -webkit-transition: .25s;
+    -moz-transition: .25s;
+    -o-transition: .25s;
+    transition: .25s;
+}
 .profile h3 {
     margin-top: 0px;
     margin-bottom: 0px;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 .profile h4 {
     margin-top: 0px;
     margin-bottom: 5px;
+    font-size: 13px;
 }
 
 .image-cropper {
@@ -123,7 +195,7 @@ input[type="submit"]:enabled input[type="submit"]:hover {
     height: 100px;
     position: relative;
     overflow: hidden;
-    border-radius: 25%;
+    border-radius: 10%;
     display: inline-block;
     text-align: center;
     margin: 12px;
@@ -152,8 +224,7 @@ input[type="submit"]:enabled input[type="submit"]:hover {
     margin: 0px 4px 0px 4px;
     text-align: center;
     display: block;
-    height: auto;
-    width: auto;
+    width: 225px;
 }
 
 /* Submit Form CSS*/

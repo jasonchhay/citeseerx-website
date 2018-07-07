@@ -8,7 +8,11 @@
 
     Rather than creating just another digital library, CiteSeer<sup>x</sup> attempts to provide resources such as algorithms, data, metadata, services, techniques, and software that can be used to promote other digital libraries. CiteSeer<sup>x</sup> has developed new methods and algorithms to index PostScript and PDF research articles on the Web. Citeseer<sup>x</sup> provides the following features.
 </p>
-<button data-toggle="collapse" data-target="#features" class="collapsible"><h2><strong>Features</strong></h2></button>
+<a data-toggle="collapse" href="#features" class="collapsible">
+    <div class="collapse-panel">
+            <h2 class="collapse-text"><strong>Features</strong></h2>
+            <h2 class="collapse-chevron" id="features-chevron"><i class="fa fa-fw fa-chevron-down"></i></h2>
+    </div></a>
     <div id="features" class="collapse">
         <div class="wrapper" style="text-align: center;">
             <div class="column">
@@ -37,7 +41,12 @@
             </div>
         </div>
     </div>
-<button data-toggle="collapse" data-target="#history" class="collapsible"><h2><strong>History</strong></h2></button>
+<a data-toggle="collapse" href="#history" class="collapsible">
+    <div class="collapse-panel">
+        <h2 class="collapse-text"><strong>History</strong></h2>
+        <h2 class="collapse-chevron" id="history-chevron"><i class="fa fa-fw fa-chevron-down"></i></h2>
+    </div>
+</a>
     <div id="history" class="collapse">
     <div class="ptext">
         <p>CiteSeer was the first digital library and search engine to provide automated citation indexing and citation linking by autonomous citation indexing.</p>
@@ -45,7 +54,12 @@
         <p>After serving as a public search engine for nearly ten years, CiteSeer, originally intended as a prototype only, began to scale beyond the capabilities of its original architecture. Since its inception, the original CiteSeer grew to index over 750,000 documents and served over 1.5 million requests daily, pushing the limits of the system's capabilities. Based on an analysis of problems encountered by the original system and the needs of the research community, a new architecture and data model was developed for the "Next Generation CiteSeer," or CiteSeerx, in order to continue the CiteSeer legacy into the foreseeable future.</p>
     </div>
     </div>
-<button data-toggle="collapse" data-target="#acknowledgements" class="collapsible"><h2><strong>Acknowledgements</strong></h2></button>
+<a data-toggle="collapse" href="#acknowledgements" class="collapsible">
+    <div class="collapse-panel">
+        <h2 class="collapse-text"><strong>Acknowledgements</strong></h2>
+        <h2 class="collapse-chevron" id="acknowledgements-chevron"><i class="fa fa-fw fa-chevron-down"></i></h2>
+    </div>
+</a>
     <div id="acknowledgements" class="collapse">
         <div class="ptext">
             <div class="content">
@@ -231,4 +245,29 @@
             <a href="https://www.nasa.gov/"><img src={% static "psuwebsite/img/logo_nasa.png" %} title="The National Aeronautics and Space Administration" class="sponsors"/></a>
         </div>
 </div>
+
+<script>
+$(document).ready(function () {
+    $("#features").on("hide.bs.collapse", function () {
+        $("#features-chevron").html('<i class="fa fa-fw fa-chevron-down"></i>');
+    });
+    $("#features").on("show.bs.collapse", function () {
+        $("#features-chevron").html('<i class="fa fa-fw fa-chevron-up"></i>');
+    });
+
+    $("#history").on("hide.bs.collapse", function () {
+        $("#history-chevron").html('<i class="fa fa-fw fa-chevron-down"></i>');
+    });
+    $("#history").on("show.bs.collapse", function () {
+        $("#history-chevron").html('<i class="fa fa-fw fa-chevron-up"></i>');
+    });
+
+    $("#acknowledgements").on("hide.bs.collapse", function () {
+        $("#acknowledgements-chevron").html('<i class="fa fa-fw fa-chevron-down"></i>');
+    });
+    $("#acknowledgements").on("show.bs.collapse", function () {
+        $("#acknowledgements-chevron").html('<i class="fa fa-fw fa-chevron-up"></i>');
+    });
+});
+</script>
 {% endblock %}

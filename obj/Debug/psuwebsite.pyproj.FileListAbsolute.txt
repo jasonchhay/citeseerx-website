@@ -3,3 +3,7 @@ E:\psuwebsite\bin\wfastcgi.py
 D:\psuwebsite\bin\Microsoft.PythonTools.WebRole.dll
 D:\psuwebsite\bin\wfastcgi.py
 D:\psuwebsite\obj\Debug\psuwebsite.pyproj.CoreCompileInputs.cache
+E:\citeseerx-website\bin\Microsoft.PythonTools.WebRole.dll
+E:\citeseerx-website\bin\wfastcgi.py
+D:\citeseerx-website\bin\Microsoft.PythonTools.WebRole.dll
+D:\citeseerx-website\bin\wfastcgi.py

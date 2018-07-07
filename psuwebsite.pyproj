@@ -66,7 +66,8 @@
     <Content Include="templates\psuwebsite\people.html" />
     <Content Include="templates\psuwebsite\privacy-policy.html" />
     <Content Include="templates\psuwebsite\publications.html" />
-    <Content Include="templates\psuwebsite\download.html" />
+    <Content Include="templates\psuwebsite\data.html" />
+    <Content Include="templates\psuwebsite\software.html" />
     <Content Include="templates\psuwebsite\submit.html" />
     <Content Include="templates\psuwebsite\scholarly-information-extraction.html" />
   </ItemGroup>
@@ -102,6 +103,12 @@
     <Compile Include="data\tests.py" />
     <Compile Include="data\views.py" />
     <Compile Include="data\__init__.py" />
+    <Compile Include="downloads\admin.py" />
+    <Compile Include="downloads\apps.py" />
+    <Compile Include="downloads\migrations\__init__.py" />
+    <Compile Include="downloads\models.py" />
+    <Compile Include="downloads\tests.py" />
+    <Compile Include="downloads\__init__.py" />
     <Compile Include="manage.py" />
     <Compile Include="people\admin.py" />
     <Compile Include="people\apps.py" />
@@ -188,8 +195,10 @@
     <Folder Include="contact\" />
     <Folder Include="contact\migrations\" />
     <Folder Include="data\" />
+    <Folder Include="downloads\" />
     <Folder Include="data\migrations\" />
     <Folder Include="data\templates\" />
+    <Folder Include="downloads\migrations\" />
     <Folder Include="media" />
     <Folder Include="media\people_portraits" />
     <Folder Include="media\professor_portraits" />

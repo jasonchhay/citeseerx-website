@@ -4,16 +4,18 @@ import json
 from django.http import HttpResponse
 from django.template import loader
 from django.shortcuts import render
-from data.forms import SubmitForm
 from django.core.mail import send_mail
 from django.contrib import messages
 from django.shortcuts import render
 from django.utils.safestring import mark_safe
 
 # Create your views here.
-def download(request):
-    return render(request, 'psuwebsite/download.html')
+def data(request):
+    return render(request, 'psuwebsite/data.html')
 
+def software(request):
+    return render(request, 'psuwebsite/software.html')
+'''
 def submit(request):
     sent = False
     form = None
@@ -31,7 +33,7 @@ def submit(request):
 
             #Taken from:
             #https://simpleisbetterthancomplex.com/tutorial/2017/02/21/how-to-add-recaptcha-to-django-site.html
-            ''' Begin reCAPTCHA validation '''
+            Begin reCAPTCHA validation
             recaptcha_response = request.POST.get('g-recaptcha-response')
             url = 'https://www.google.com/recaptcha/api/siteverify'
             values = {
@@ -43,7 +45,7 @@ def submit(request):
             req =  urllib.request.Request(url, data=data)
             response = urllib.request.urlopen(req)
             result = json.loads(response.read().decode())
-            ''' End reCAPTCHA validation '''
+            End reCAPTCHA validation
 
             print(str(result))
             
@@ -87,3 +89,4 @@ def submit(request):
             form = SubmitForm(request.GET)
 
     return render(request, 'psuwebsite/submit.html', {'form' : form, 'message' : mark_safe(message), 'error' : error})
+'''

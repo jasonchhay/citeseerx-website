@@ -8,6 +8,7 @@
 
 <div class="content">
     <div class="ptext">
+        <p><a href="http://csxcrawlweb01.ist.psu.edu/">Crawler Home</a> | <a href="http://csxcrawlweb01.ist.psu.edu/query/">Query</a></p>
         <h3>Crawling for Authors:</h3>
         <p>Users are encouraged to submit content that they deem appropriate to the CiteSeer<sup>x</sup> collection. CiteSeerX crawls and indexes documents that are freely and publicly available on the Web. </p>
         <p>If you do not want your documents crawled by CiteSeer<sup>x</sup>, please use a <i>robots.txt</i> to disallow our crawler named <i>citeseerxbot</i>.</p>
@@ -78,4 +79,13 @@
         <br>
     </div>
 </div>
+
+<script>
+    document.getElementById("submit").disabled = true;
+
+    function enableBtn() {
+        document.getElementById("submit").disabled = false;
+    }
+</script>
+
 {% endblock %}

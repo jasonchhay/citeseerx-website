@@ -1,7 +1,13 @@
 ﻿{% load staticfiles %}
+{% load macros %}
+
+{% macro header %}
+    {% block header %}{% endblock %}
+{% endmacro %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>{% use_macro header %} | CiteSeerX</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,6 +15,8 @@
     <!--<link rel="stylesheet" href = "{% static 'psuwebsite/css/bootstrap.min.css' %}"/> -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
     <link href="{% static 'psuwebsite/css/navigation.css' %}" rel="stylesheet">
     <link href="{% static 'psuwebsite/css/textstyles.css' %}" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'psuwebsite/css/footer-distributed-with-address-and-phones.css' %}">
@@ -24,57 +32,67 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body>
-    <a name="top"></a>
-    <!-- navigation tabs -->
-    <a href="http://citeseerx.ist.psu.edu">
-        <img src={% static "psuwebsite/img/citeseerx.png" %} title="CiteSeerX" class="citeseerx_logo"></img>
-    </a> <div class="psunav">
-        <ul>
-            <!-- About -->
-            <!--<li class="li-1"><a href="/home"><div class="colorchange active-choice">About</div></a></li>-->
-            <li class="li-1"><a href="/home"><div class="colorchange">About</div></a></li>
-            <!-- People Dropdown -->
-            <li class="li-2">
-                <div class="colorchange"><button class="dropbtn" id="dropbtn-people"disabled>
-                    People <i class="fa fa-caret-down"></i>
-                    <div class="dropmenu-content" id="dropmenu-content-people">
-                        <a href="/people/team">Team</a>
-                        <a href="/people/collaborators">Collaborators</a>
-                    </div>
-                </button>
-                </div>
-            </li>
-            <!-- Publications -->
-            <li class="li-2"><a href="{% static "psuwebsite/pdf/citeseer-related.pdf" %}"><div class="colorchange">Publications</div></a></li>
-            <!-- Data Dropdown -->
-            <li class="li-2">
-                <div class="colorchange"><button class="dropbtn" id="dropbtn-downloads" disabled>
-                    Data <i class="fa fa-caret-down"></i>
-                    <div class="dropmenu-content" id="dropmenu-content-downloads">
-                        <a href="/data/download">Download</a>
-                        <a href="/data/submit">Submit</a>
-                    </div>
-                </button></div>
-            </li>
-            <!-- Scholarly Information Dropdown -->
-            <li class="li-2"><a href="/scholarly-information-extraction"><div class="colorchange">Scholarly Information Extraction</div></a></li>
-            <!-- Contact Form -->
-            <li class="li-2"><a href="/contact"><div class="colorchange">Contact</div></a></li>
-        </ul>
-    </div>
 
-        <div>
-            <header>
-        
-        <div class="pagetitle">
-            <div class="container">
-                <h1 class="titletext">{% block header %}{% endblock %}</h1>
-            </div>
+<body>
+
+<div class="container header">
+    <header>
+        <a name="top"></a>
+        <!-- navigation tabs -->
+        <a href="http://citeseerx.ist.psu.edu">
+            <img src={% static "psuwebsite/img/citeseerx.png" %} title="CiteSeerX" class="citeseerx_logo"></img>
+        </a> <div class="psunav">
+            <ul>
+                <!-- About -->
+                <!--<li class="li-1"><a href="/home"><div class="colorchange active-choice">About</div></a></li>-->
+                <li class="li-1"><a href="/home"><div class="colorchange">About</div></a></li>
+                <!-- People Dropdown -->
+                <li class="li-2">
+                    <div class="colorchange">
+                    <div class="dropbtn" id="dropbtn-people">
+                        People <i class="fa fa-caret-down"></i>
+                        <div class="dropmenu-content" id="dropmenu-content-people">
+                            <a href="/people/team">Team</a>
+                            <a href="/people/collaborators">Collaborators</a>
+                        </div>
+                    </div>
+                    </div>
+                </li>
+                <!-- Publications -->
+                <li class="li-2"><a href="{% static "psuwebsite/pdf/citeseer-related.pdf" %}"><div class="colorchange">Publications</div></a></li>
+                <!-- Data Dropdown -->
+                <li class="li-2">
+                    <div class="colorchange">
+                    <div class="dropbtn" id="dropbtn-downloads">
+                        Downloads <i class="fa fa-caret-down"></i>
+                        <div class="dropmenu-content" id="dropmenu-content-downloads">
+                            <a href="/downloads/data">Data</a>
+                            <a href="/downloads/software">Software</a>
+                        </div>
+                    </div></div>
+                </li>
+                <!-- Contact Form -->
+                <li class="li-2">
+                    <div class="colorchange">
+                    <div class="dropbtn" id="dropbtn-contact">
+                        Contact <i class="fa fa-caret-down"></i>
+                        <div class="dropmenu-content" id="dropmenu-content-contact">
+                            <a href="/contact">Contact Us</a>
+                            <a href="http://csxcrawlweb01.ist.psu.edu/submit_pub/" target="_blank">Crawler</a>
+                        </div>
+                    </div></div>
+                </li>
+            </ul>
         </div>
-        
-            </header>
+    </header>
+</div>
+<div>
+    <div class="pagetitle">
+        <div class="container">
+            <h1 class="titletext">{% use_macro header %}</h1>
         </div>
+    </div>
+</div>
         <div class="pagebody">
             <div class="container bodytext">
                 <div class="row">
