@@ -1,15 +1,29 @@
 from django.http import HttpResponse
 from django.template import loader
 from django.shortcuts import render
-from .models import Publications
+from .filters import PublicationFilter
+from .models import Publication
+from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 # Create your views here.
 
 
 def publications(request):
-    publications = Publications.objects.all().filter().order_by('-year')
-    distinctvenue = Publications.objects.order_by().values_list('venue', flat=True).distinct()
+    publication_list = Publication.objects.all().filter().order_by('-year','title')
+    filter = PublicationFilter(request.GET, publication_list)
+    paginator = Paginator(filter.qs, 25)
+
+    page = request.GET.get('page')
+    
+    try:
+        publications = paginator.page(page)
+    except PageNotAnInteger: 
+        publications = paginator.page(1)
+    except EmptyPage:
+        publications = paginator.page(paginator.num_pages)
+
+    print(filter.data)
     return render(request, 'psuwebsite/publications.html', {'publications': publications,
-                                                        'distinctvenues': distinctvenue})
+                                                            'filter':filter, 'data':filter.data})
 
 '''
 def publications(request):

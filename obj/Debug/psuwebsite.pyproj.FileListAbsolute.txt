@@ -7,3 +7,4 @@ E:\citeseerx-website\bin\Microsoft.PythonTools.WebRole.dll
 E:\citeseerx-website\bin\wfastcgi.py
 D:\citeseerx-website\bin\Microsoft.PythonTools.WebRole.dll
 D:\citeseerx-website\bin\wfastcgi.py
+D:\citeseerx-website\obj\Debug\psuwebsite.pyproj.CoreCompileInputs.cache

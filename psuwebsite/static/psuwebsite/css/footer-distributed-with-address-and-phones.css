@@ -6,7 +6,7 @@
     height: inherit;
 	text-align: left;
 	font: bold 16px sans-serif;
-	padding: 55px 50px;
+	padding: 50px 40px;
 
 }
 
@@ -21,7 +21,8 @@
 
 .footer-distributed .footer-left{
 	width: 40%;
-    margin-left: 75px;
+    margin-left: 20px;
+    margin-right: 20%;
 }
 
 /* The company logo */
@@ -67,7 +68,7 @@
 
 .footer-distributed .footer-center{
 	width: 35%;
-    margin-left: -75px;
+    margin-left: 0px;
 }
 
 .footer-distributed .footer-center i{
@@ -113,6 +114,7 @@
 .footer-distributed .footer-right{
 	width: 20%;
     margin-left: -75px;
+    float: right;
 }
 
 .footer-distributed .footer-company-about{

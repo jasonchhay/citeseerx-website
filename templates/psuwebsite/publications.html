@@ -1,6 +1,88 @@
 ﻿{% extends 'base.html' %}
-{% block title %}Publications{% endblock %}
 {% block header %}Publications{% endblock %}
 
 {% block content %}
+<div class="content ptext">
+<script>
+  var value = [1999, {% now "Y" %}];
+  {% if data.year__gte != None %}
+  value[0] = {{ data.year__gte }};
+  {% endif %}
+  {% if data.year__lte != None %}
+  value[1] = {{ data.year__lte }};
+  {% endif %}
+
+  $( function() {
+    $( "#slider-range" ).slider({
+      range: true,
+      min: 1999,
+      max: {% now "Y" %},
+      values: value,
+        
+      slide: function( event, ui ) {
+        $( "#id_year__gte" ).val(ui.values[ 0 ]);
+        $( "#id_year__lte" ).val(ui.values[ 1 ]);
+        $( "#year-range").val(ui.values[ 0 ] + " - " + ui.values[ 1 ]);
+      }
+    });
+    $( "#id_year__gte" ).val($( "#slider-range" ).slider( "values", 0 ));
+    $( "#id_year__lte" ).val($( "#slider-range" ).slider( "values", 1 ));
+    $( "#year-range" ).val($( "#slider-range" ).slider( "values", 0 ) + " - " + $( "#slider-range" ).slider( "values", 1 ));
+
+  } );
+</script>
+
+    <div class="filter">
+        <div class="filter-content">
+            <form method="get">
+                <input type="text" placeholder="Title" value="{{ data.title__icontains }}" name="title__icontains" id="id_title__icontains" />
+                <input type="text" placeholder="Author(s)" value="{{ data.author__icontains }}" name="author__icontains" id="id_author__icontains" />
+                <input type="text" placeholder="Venue" value="{{ data.venue__icontains }}" name="venue__icontains" id="id_venue__icontains" />
+                <!--<p><input type="text" placeholder="Year" name="year" id="id_year" /></p>-->
+                <input type="text" id="year-range" value="{{ data.year__gte }} - {{ data.year__lte }}" readonly />
+                <input type="text" name="year__gte" step="any" id="id_year__gte" readonly/>
+                <input type="text" name="year__lte" step="any" id="id_year__lte" readonly />
+                <div id="slider-range"></div>
+
+                <button type="submit" class="submit-button" id="filter-search">Search</button>
+            </form>
+        </div>
+    </div>
+    
+    <div class="publications">
+        <!-- Pagination (From Django documentation) -->
+        <ul class="publication_document">
+            {% for publication in publications %}
+                <li class ="{% cycle 'publication1' 'publication2' %}" style="list-style-type: none;">{{publication.author}}. {{publication.year}}.<br />
+                <strong>{{ publication.title }}</strong><br />
+                {{ publication.venue }}<br />
+                <a href="{{ publication.link }}" target="_blank" >Paper</a></li>
+            {% endfor %}
+        </ul>
+        <div class="pagination">
+            <span class="step-links">
+                {% if publications.has_previous %}
+                    <a class="submit-button" href="?page=1"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a>
+                    <a class="submit-button" href="?page={{ publications.previous_page_number }}"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+                {% else %}
+                    <span class="submit-button-disabled"><i class="fa fa-angle-double-left" aria-hidden="true"></i></span>
+                    <span class="submit-button-disabled"><i class="fa fa-angle-left" aria-hidden="true"></i></span>
+                {% endif %}
+            
+                <span class="current">
+                    Page {{ publications.number }} of {{ publications.paginator.num_pages }}.
+                </span>
+
+                {% if publications.has_next %}
+                    <a class="submit-button" href="?page={{ publications.next_page_number }}"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                    <a class="submit-button" href="?page={{ publications.paginator.num_pages }}"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                {% else %}
+                    <span class="submit-button-disabled"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
+                    <span class="submit-button-disabled"><i class="fa fa-angle-double-right" aria-hidden="true"></i></span>
+                {% endif %}
+            </span>
+        </div>
+    </div>
+</div>
+
 {% endblock %}

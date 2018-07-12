@@ -9,7 +9,7 @@
 }
 
 h2 {
-    font-size: 28px;
+    font-size: 25px;
 }
 
 h2, h3, h4 {
@@ -324,7 +324,7 @@ input {
 
 .required {
     color: red;
-    font-size: 12px;
+    font-size: 10px;
     vertical-align: super;
     margin-left: 3px;
 }
@@ -347,3 +347,52 @@ u {
     color: #333;
 }
 
+#features {
+    margin: auto;
+    width: 95%;
+}
+
+.features td {
+    vertical-align: top;
+    display: inline-block;
+    text-align:center;
+    margin: 5px;
+}
+
+.features-header {
+    text-align: center;
+    font-weight: 700;
+    padding: 25px;
+    height: 100%;
+    width: 350px;
+    background-color: #e0e6e8;
+    border: 1px solid #d5dcde;
+    box-shadow: -2px 6px 9px -5px #cfcfcf;
+    position: relative;
+}
+
+.features-header:hover, .features-header:focus {
+    border: 1px solid #cbcfd0;
+    text-decoration: none;
+    outline-width: 0;
+}
+
+.features-header:active {
+    background-color:#cbcfd0;
+}
+
+.features-text {
+    width: 350px;
+    text-align: center;
+    margin: auto;
+    z-index: 1;
+    position: absolute;
+    background-color: white;
+    border: solid #d5dcde;
+    border-width: 0 1px;
+    padding: 0 5px 0 5px;
+    box-shadow: -2px 6px 9px -5px #cfcfcf;
+}
+.filter {
+    color: black;
+}

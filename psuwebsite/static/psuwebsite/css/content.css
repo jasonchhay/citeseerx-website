@@ -84,6 +84,9 @@
     /* symbol for "collapsed" panels */
     content: "\e080"; /* adjust as needed, taken from bootstrap.css */
 }
+
+/* Features */
+
 /*Contact Form CSS*/
 .contact_info {
     word-wrap: break-word;
@@ -127,15 +130,35 @@
     width: 50%;
 }
 
-input[type="submit"] {
+.submit-button {
     padding: 4px;
-    background-color: #9fb8c3;
-    outline: none;
+    background-color: #e6e6e6;
+    border: 1px solid #d6d6d6;
+    color: #4b5a63;
+    box-shadow: 0 2px 2px 0px rgba(0,0,0,0.1);
 }
 
-input[type="submit"]:enabled input[type="submit"]:hover {
-    background-color: #80949c;
+.submit-button:disabled, .submit-button-disabled {
+    background-color: #e0e0e0;
+    color: #949494;
+    box-shadow: 0 2px 2px 0px rgba(0,0,0,0.1);
+    border: 1px solid #d6d6d6;
+    padding: 4px;
 }
+
+.submit-button:active {
+    background-color: #c6c6c6;
+}
+
+.submit-button:hover:enabled {
+    border-color: #aac0ca;
+}
+
+.submit-button:focus {
+    text-decoration: none;
+    color: inherit;
+}
+
 
 /*Team CSS*/
 
@@ -242,7 +265,7 @@ a:hover .profile {
 
 /*Features CSS*/
 .column {
-    width: 40%;
+    width: 30%;
     display: inline-block;
     vertical-align: top;
     margin: 0 auto;
@@ -250,4 +273,82 @@ a:hover .profile {
 .column ul li {
     list-style-type: none;
     text-align: left;
+}
+
+/* Publications CSS */
+.filter {
+    width: 250px;
+    height: inherit;
+    float: left;
+    background-color: #9fb8c3;
+    padding: 15px;
+    overflow: hidden;
+    margin: 0 25px 25px 0;
+}
+
+.filter-content input {
+    width: 100%;
+    display: inline-block;
+    border: 1px solid #ccc;
+    height: 35px;
+    padding: 10px;
+    border-width: 1px;
+}
+.filter-content p {
+    margin-bottom: 0;
+    float: left;
+}
+#id_year__gte, #id_year__lte {
+    display: none;
+    float: left;
+    width: 50%;
+}
+
+#slider-range {
+    margin-top: 4px;
+}
+
+.filter-content {
+    text-align: center;
+}
+.filter-content form, .filter-content form, .filter-content input, filter-content p{
+    margin: 0;
+}
+
+.filter h2 {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+#filter-search {
+    display: inline-block;
+    margin-top: 8px;
+}
+
+.publications {
+    width: 75%;
+    float: right;
+    height: inherit;
+    float: left;
+}
+
+.publication_document {
+    padding: 0px;
+}
+
+.publication_document li {
+    padding: 10px 10px 5px 10px;
+}
+
+.publication1 {
+    background-color: #e0e6e8;
+}
+
+.publication2 {
+    background-color: #cdd5d8;
+}
+
+.pagination {
+    float: right;
+    width: 175px;
 }

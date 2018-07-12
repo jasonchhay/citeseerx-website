@@ -159,6 +159,9 @@
     <Compile Include="publications\migrations\0004_auto_20180107_1938.py" />
     <Compile Include="publications\migrations\__init__.py" />
     <Compile Include="publications\models.py" />
+    <Compile Include="publications\filters.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="publications\tests.py" />
     <Compile Include="publications\urls.py" />
     <Compile Include="publications\validators.py" />
