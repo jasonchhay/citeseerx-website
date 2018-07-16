@@ -8,22 +8,20 @@
         <div class="group">
             <h2 class="section-header"><strong>{{ group }}</strong></h2>
             {% for person in people %}
-            <a href="{{person.webpageurl}}" class="profile-link" target="_blank">
-                <div class="profile">
-                    <div class="profile-content">
-                    <div class="image-cropper">
-                        <img src="{{ person.image.url }}" alt="img">
-                    </div>
-                    <h3><strong>{{ person.fullname }}</strong></h3>
-                    <h4>{{ person.role }}</h4>
-                    <!--                    <div class="profile-content">
-                        <div class="profile-text">
-                             <p class="ptext">{{ person.description|safe }}</p>
+            <div class="dropdown profile-dropdown">
+                <a href="{{person.webpageurl}}" class="profile-link" target="_blank">
+                    <div class="profile">
+                        <div class="profile-content">
+                            <div class="image-cropper">
+                                <img src="{{ person.image.url }}" alt="img">
+                            </div>
+                            <h3><strong>{{ person.fullname }}</strong></h3>
+                            <h4>{{ person.role }}</h4>
                         </div>
-                    </div>-->
                     </div>
-                </div>
-            </a>
+                    <div class="profile-text dropdown-content ptext">{{person.description|safe}}</div>
+                </a>
+            </div>
             {% endfor %}
         </div>
     {% endfor %}

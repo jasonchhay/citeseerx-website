@@ -31,7 +31,6 @@
 
   } );
 </script>
-
     <div class="filter">
         <div class="filter-content">
             <form method="get">
@@ -59,6 +58,7 @@
                 <a href="{{ publication.link }}" target="_blank" >Paper</a></li>
             {% endfor %}
         </ul>
+        <span class="citations">Here is a compiled list of all the <a href="http://clgiles.ist.psu.edu/citeseer-related.pdf">citations for  the publications.</a></span>
         <div class="pagination">
             <span class="step-links">
                 {% if publications.has_previous %}
