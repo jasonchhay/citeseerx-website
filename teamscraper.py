@@ -1,2 +1,0 @@
-import urllib3
-from beautifulsoup4 import BeautifulSoup

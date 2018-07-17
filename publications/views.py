@@ -8,7 +8,7 @@ from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 
 
 def publications(request):
-    publication_list = Publication.objects.all().filter().order_by('-year','title')
+    publication_list = Publication.objects.filter().order_by('-year','title')
     filter = PublicationFilter(request.GET, publication_list)
     paginator = Paginator(filter.qs, 25)
 

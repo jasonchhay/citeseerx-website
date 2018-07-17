@@ -41,6 +41,10 @@
                 <input type="text" id="year-range" value="{{ data.year__gte }} - {{ data.year__lte }}" readonly />
                 <input type="text" name="year__gte" step="any" id="id_year__gte" readonly/>
                 <input type="text" name="year__lte" step="any" id="id_year__lte" readonly />
+                <input type="checkbox" name="category" value="Journal" id="category__exact"/>
+                    <label for="journal">Journal</label>
+                <input type="checkbox" name="category" value="Conference" id="category__exact" />
+                    <label for="conference">Conference</label>
                 <div id="slider-range"></div>
 
                 <button type="submit" class="submit-button" id="filter-search">Search</button>
@@ -55,6 +59,7 @@
                 <li class ="{% cycle 'publication1' 'publication2' %}" style="list-style-type: none;">{{publication.author}}. {{publication.year}}.<br />
                 <strong>{{ publication.title }}</strong><br />
                 {{ publication.venue }}<br />
+                {{ publication.category }}<br />
                 <a href="{{ publication.link }}" target="_blank" >Paper</a></li>
             {% endfor %}
         </ul>

@@ -7,4 +7,5 @@ class PublicationFilter(django_filters.FilterSet):
         fields = {'title':['icontains',] ,
                   'author':['icontains', ],
                   'year':['exact','gte','lte', ],
-                  'venue':['icontains', ]}
+                  'venue':['icontains', ],
+                  'category':['exact']}

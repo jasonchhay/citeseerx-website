@@ -31,7 +31,7 @@ class Command(BaseCommand):
                     team_member.description = row['description']
                     team_member.category = row['category']
 
-                    with open("/mnt/f/psuwebsite/media/team_portraits/{}".format(row['image']), 'rb') as img:
+                    with open("./media/team_portraits/{}".format(row['image']), 'rb') as img:
                         team_member.image.save(os.path.basename("{}".format(row['image'])),img)
                     team_member.save()
                     print("Successfully added ",team_member.fullname)

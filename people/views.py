@@ -5,13 +5,15 @@ from django.utils.safestring import mark_safe
 
 from .models import TeamMember
 
+from collections import OrderedDict
+
 def team(request):
 
     for person in TeamMember.objects.all():
         if person.description != None:
             person.description = mark_safe(person.description)
 
-    team = {}
+    team = OrderedDict()
     team['Core Team'] = TeamMember.objects.all().filter(category = 'Core Team')
     team['Noted Contributors'] = TeamMember.objects.all().filter(category = 'Noted Contributors')
     team['Founders'] = TeamMember.objects.all().filter(category = 'Founders')
