@@ -82,23 +82,19 @@ WSGI_APPLICATION = 'psuwebsite.wsgi.application'
 
 DATABASES = {
     'default': {
-        #'ENGINE': 'django.db.backends.mysql',
-        #'NAME': 'citeseerx-website',
-        #'USER': 'jqc6195',
-        #'PASSWORD': 'psuwebsite',
-        #'HOST': 'localhost',
-        #'PORT': '5432',
-<<<<<<< HEAD
-    #}
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'citeseerx-website',
+        'USER': 'jqc6195',
+        'PASSWORD': 'psuwebsite',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
 
     #'default': {
     #   'ENGINE': 'django.db.backends.sqlite3',
     #   'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     #}
-=======
-    }
 
->>>>>>> b1c262236de2309658b077cc5735685f055cc4c8
 }
 
 
