@@ -23,16 +23,14 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = ''
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['10.0.0.66','*']
+ALLOWED_HOSTS = ['*']
 
-
+ADMINS = [('Jason Chhay','jqc6195@psu.edu')]
 # Application definition
 
 INSTALLED_APPS = [
-    'blog.apps.BlogConfig',
-    'projects.apps.ProjectsConfig',
     'people.apps.PeopleConfig',
     'publications.apps.PublicationsConfig',
     'django.contrib.admin',
@@ -81,24 +79,20 @@ WSGI_APPLICATION = 'psuwebsite.wsgi.application'
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
+    #'default': {
         #'ENGINE': 'django.db.backends.mysql',
         #'NAME': 'citeseerx-website',
         #'USER': 'jqc6195',
         #'PASSWORD': 'psuwebsite',
         #'HOST': 'localhost',
         #'PORT': '5432',
-<<<<<<< HEAD
     #}
 
-    #'default': {
-    #   'ENGINE': 'django.db.backends.sqlite3',
-    #   'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    #}
-=======
+    'default': {
+       'ENGINE': 'django.db.backends.sqlite3',
+       'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 
->>>>>>> b1c262236de2309658b077cc5735685f055cc4c8
 }
 
 
@@ -153,8 +147,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 #EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'jasonchhay@gmail.com'
-EMAIL_HOST_PASSWORD = ''
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.psu.edu'
+EMAIL_BACKEND ='django.core.mail.backends.smtp.EmailBackend' 
+
+SERVER_EMAIL = 'error@citeseerx.ist.psu.edu'
+#EMAIL_USE_SSL = False

@@ -21,7 +21,6 @@
     <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="data\templates\index.html" />
     <Content Include="giles.jpg" />
     <Content Include="psuwebsite\static\psuwebsite\img\headprofiles\noimage.png" />
     <Content Include="media\people_portraits\Jeffery.jpg" />
@@ -59,30 +58,16 @@
     <Content Include="psuwebsite\static\psuwebsite\js\jquery-3.2.1.js" />
     <Content Include="psuwebsite\static\psuwebsite\js\jquery-3.2.1.min.js" />
     <Content Include="psuwebsite\templates\psuwebsite\index.html" />
-    <Content Include="sie\templates\index.html" />
     <Content Include="templates\base.html" />
     <Content Include="templates\psuwebsite\help.html" />
     <Content Include="templates\psuwebsite\index.html" />
-    <Content Include="templates\psuwebsite\people.html" />
     <Content Include="templates\psuwebsite\privacy-policy.html" />
     <Content Include="templates\psuwebsite\publications.html" />
     <Content Include="templates\psuwebsite\data.html" />
     <Content Include="templates\psuwebsite\software.html" />
     <Content Include="templates\psuwebsite\submit.html" />
-    <Content Include="templates\psuwebsite\scholarly-information-extraction.html" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="blog\admin.py" />
-    <Compile Include="blog\apps.py" />
-    <Compile Include="blog\migrations\0001_initial.py" />
-    <Compile Include="blog\migrations\0002_auto_20180107_1938.py" />
-    <Compile Include="blog\migrations\0003_auto_20180107_1939.py" />
-    <Compile Include="blog\migrations\__init__.py" />
-    <Compile Include="blog\models.py" />
-    <Compile Include="blog\tests.py" />
-    <Compile Include="blog\urls.py" />
-    <Compile Include="blog\views.py" />
-    <Compile Include="blog\__init__.py" />
     <Compile Include="contact\admin.py" />
     <Compile Include="contact\apps.py" />
     <Compile Include="contact\migrations\__init__.py" />
@@ -90,19 +75,6 @@
     <Compile Include="contact\tests.py" />
     <Compile Include="contact\views.py" />
     <Compile Include="contact\__init__.py" />
-    <Compile Include="data\admin.py" />
-    <Compile Include="data\apps.py" />
-    <Compile Include="data\forms.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="data\urls.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="data\migrations\__init__.py" />
-    <Compile Include="data\models.py" />
-    <Compile Include="data\tests.py" />
-    <Compile Include="data\views.py" />
-    <Compile Include="data\__init__.py" />
     <Compile Include="downloads\admin.py" />
     <Compile Include="downloads\apps.py" />
     <Compile Include="downloads\migrations\__init__.py" />
@@ -133,19 +105,6 @@
     <Compile Include="people\urls.py" />
     <Compile Include="people\views.py" />
     <Compile Include="people\__init__.py" />
-    <Compile Include="projects\admin.py" />
-    <Compile Include="projects\apps.py" />
-    <Compile Include="projects\migrations\0001_initial.py" />
-    <Compile Include="projects\migrations\0002_auto_20180107_0119.py" />
-    <Compile Include="projects\migrations\0003_auto_20180107_0137.py" />
-    <Compile Include="projects\migrations\0004_auto_20180107_0152.py" />
-    <Compile Include="projects\migrations\0005_auto_20180107_1938.py" />
-    <Compile Include="projects\migrations\__init__.py" />
-    <Compile Include="projects\models.py" />
-    <Compile Include="projects\tests.py" />
-    <Compile Include="projects\urls.py" />
-    <Compile Include="projects\views.py" />
-    <Compile Include="projects\__init__.py" />
     <Compile Include="psuwebsite\settings.py" />
     <Compile Include="psuwebsite\urls.py" />
     <Compile Include="psuwebsite\views.py" />
@@ -167,16 +126,6 @@
     <Compile Include="publications\validators.py" />
     <Compile Include="publications\views.py" />
     <Compile Include="publications\__init__.py" />
-    <Compile Include="sie\admin.py" />
-    <Compile Include="sie\apps.py" />
-    <Compile Include="sie\migrations\__init__.py" />
-    <Compile Include="sie\models.py" />
-    <Compile Include="sie\urls.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="sie\tests.py" />
-    <Compile Include="sie\views.py" />
-    <Compile Include="sie\__init__.py" />
     <Compile Include="venv\bin\activate_this.py" />
     <Compile Include="venv\bin\django-admin.py" />
     <Compile Include="venv\bin\enhancer.py" />
@@ -193,14 +142,9 @@
     <Compile Include="venv\bin\viewer.py" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="blog" />
-    <Folder Include="blog\migrations" />
     <Folder Include="contact\" />
     <Folder Include="contact\migrations\" />
-    <Folder Include="data\" />
     <Folder Include="downloads\" />
-    <Folder Include="data\migrations\" />
-    <Folder Include="data\templates\" />
     <Folder Include="downloads\migrations\" />
     <Folder Include="media" />
     <Folder Include="media\people_portraits" />
@@ -209,8 +153,6 @@
     <Folder Include="people\management\" />
     <Folder Include="people\management\commands\" />
     <Folder Include="people\migrations" />
-    <Folder Include="projects" />
-    <Folder Include="projects\migrations" />
     <Folder Include="psuwebsite" />
     <Folder Include="psuwebsite\static\" />
     <Folder Include="psuwebsite\static\psuwebsite\" />
@@ -223,9 +165,6 @@
     <Folder Include="psuwebsite\templates\psuwebsite" />
     <Folder Include="publications" />
     <Folder Include="publications\migrations" />
-    <Folder Include="sie\" />
-    <Folder Include="sie\migrations\" />
-    <Folder Include="sie\templates\" />
     <Folder Include="templates" />
     <Folder Include="templates\psuwebsite" />
     <Folder Include="venv\" />

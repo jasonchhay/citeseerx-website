@@ -30,20 +30,21 @@
     $( "#year-range" ).val($( "#slider-range" ).slider( "values", 0 ) + " - " + $( "#slider-range" ).slider( "values", 1 ));
 
   } );
+  
 </script>
     <div class="filter">
         <div class="filter-content">
             <form method="get">
-                <input type="text" placeholder="Title" value="{{ data.title__icontains }}" name="title__icontains" id="id_title__icontains" />
-                <input type="text" placeholder="Author(s)" value="{{ data.author__icontains }}" name="author__icontains" id="id_author__icontains" />
-                <input type="text" placeholder="Venue" value="{{ data.venue__icontains }}" name="venue__icontains" id="id_venue__icontains" />
+                <input type="text" placeholder="Title" value="{{ data.title }}" name="title__icontains" id="id_title" />
+                <input type="text" placeholder="Author(s)" value="{{ data.author }}" name="author" id="id_author" />
+                <input type="text" placeholder="Venue" value="{{ data.venue }}" name="venue" id="id_venue" />
                 <!--<p><input type="text" placeholder="Year" name="year" id="id_year" /></p>-->
                 <input type="text" id="year-range" value="{{ data.year__gte }} - {{ data.year__lte }}" readonly />
                 <input type="text" name="year__gte" step="any" id="id_year__gte" readonly/>
                 <input type="text" name="year__lte" step="any" id="id_year__lte" readonly />
-                <input type="checkbox" name="category" value="Journal" id="category__exact"/>
-                    <label for="journal">Journal</label>
-                <input type="checkbox" name="category" value="Conference" id="category__exact" />
+                <input type="checkbox" name="category" value="Journal" id="category__exact" {% if 'Journal' in data.category %}checked="checked"{% endif %} />
+                    <label for="journal">Journal {{ data.category }}</label>
+                <input type="checkbox" name="category" value="Conference" id="category__exact" {% if 'Conference' in data.category %}checked="checked"{% endif %} />
                     <label for="conference">Conference</label>
                 <div id="slider-range"></div>
 

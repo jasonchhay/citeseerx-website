@@ -5,8 +5,9 @@ from django.http import HttpResponse
 from django.template import loader
 from django.shortcuts import render
 from contact.forms import ContactForm
-from django.core.mail import send_mail
+from django.core.mail import mail_admins, send_mail
 from django.contrib import messages
+from django.contrib.auth.models import Group, User
 
 # Create your views here.
 def contact(request):
@@ -14,6 +15,7 @@ def contact(request):
     form = None
     message = ''
     error = False
+
     #Add in implementation to prevent header injection in a future date
 
     if request.method == 'POST':
@@ -42,15 +44,16 @@ def contact(request):
 
             print(str(result))
             
+
             #If the user is able to successfully validate the captcha and their information is correct
             if result['success']:
                 cd = form.cleaned_data
                 contact_name = "{} {}".format(cd['first_name'], cd['last_name'])
                 contact_email = cd['email']
-                contact_subject = 'CiteSeerX: Message from {}: {}'.format(contact_name,cd['subject'])
+                contact_subject = '[CiteSeerX Feedback] Message from {}: {}'.format(contact_name,cd['subject'])
                 content = '{}\nEmail: {}'.format(cd['content'],contact_email)
-
-                send_mail(contact_subject, content, contact_email, ['jasonchhay@gmail.com'])
+                recipient_list = [person.email for person in User.objects.all() if (person.groups.filter(name="Email") and person.email)]
+                send_mail(contact_subject, content, contact_email, recipient_list)
                 message = 'E-mail sent successfully.'
             #If the user refreshes the page after they already submitted a POST
             elif result['error-codes'] and result['error-codes'] == ['timeout-or-duplicate']:

@@ -29,7 +29,7 @@ class Publication(models.Model):
     paperfile = models.FileField(upload_to='paper_files/', blank=True)
     category = models.CharField(max_length=25,choices = CATEGORY_CHOICES, default='Journal')
 
-    objects = PublicationQuerySet.as_manager()
+    #objects = PublicationQuerySet.as_manager()
 
     def __str__(self):
         return self.title + ', ' + str(self.year)
