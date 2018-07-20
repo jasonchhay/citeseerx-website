@@ -51,9 +51,12 @@ def contact(request):
                 contact_name = "{} {}".format(cd['first_name'], cd['last_name'])
                 contact_email = cd['email']
                 contact_subject = '[CiteSeerX Feedback] Message from {}: {}'.format(contact_name,cd['subject'])
-                content = '{}\nEmail: {}'.format(cd['content'],contact_email)
+                content = "{}Contact's email: {}".format(cd['content'],contact_email)
+                html_content = "<p>{}</p><p><strong>Contact's Email:</strong> {}</p>".format(cd['content'],contact_email)
+
                 recipient_list = [person.email for person in User.objects.all() if (person.groups.filter(name="Email") and person.email)]
-                send_mail(contact_subject, content, contact_email, recipient_list)
+
+                send_mail(contact_subject, content, 'feedback@citeseerx.ist.psu.edu', recipient_list, html_message=html_content)
                 message = 'E-mail sent successfully.'
             #If the user refreshes the page after they already submitted a POST
             elif result['error-codes'] and result['error-codes'] == ['timeout-or-duplicate']:
