@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = ''
+SECRET_KEY = 'uiop@u@1iu7mo1tqouj+d%)z_^xmst*=csv@y)--fn55u3$kyf'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'macros',
-    'django_filters',
 ]
 
 MIDDLEWARE = [
@@ -131,10 +130,18 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
+PROJECT_ROOT = os.path.normpath(os.path.dirname(__file__))
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
+'''
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'psuwebsite/static/'),
-    os.path.join(BASE_DIR, 'psuwebsite/static/'),
+    os.path.join(PROJECT_ROOT, '..', 'psuwebsite/static/'),
 )
+'''
+STATICFILES_DIRS = (
+	#os.path.join(BASE_DIR, "static"),
+	os.path.join(BASE_DIR, "psuwebsite/static"),
+)
+
 STATIC_URL = '/static/'
 
 STATICFILES_FINDERS = (

@@ -25,14 +25,14 @@ class Command(BaseCommand):
                 for row in reader:
                     team_member = TeamMember()
                     print(row)
-                    team_member.fullname = row['\ufeffname']
+                    team_member.fullname = row['\xef\xbb\xbfname']
                     team_member.role = row['role']
                     team_member.webpageurl = row['webpageurl']
                     team_member.description = row['description']
                     team_member.category = row['category']
 
-                    with open("./media/team_portraits/{}".format(row['image']), 'rb') as img:
-                        team_member.image.save(os.path.basename("{}".format(row['image'])),img)
+                    with open("./psuwebsite/static/media/team_portraits/{}".format(row['image']), 'rb') as img:
+                        team_member.image.save("./psuwebsite/static/psuwebsite/img/team_portraits/{}".format(row['image']), File(img))
                     team_member.save()
                     print("Successfully added ",team_member.fullname)
         print("Team data finished loading")

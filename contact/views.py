@@ -50,7 +50,7 @@ def contact(request):
                 cd = form.cleaned_data
                 contact_name = "{} {}".format(cd['first_name'], cd['last_name'])
                 contact_email = cd['email']
-                contact_subject = '[CiteSeerX Feedback] Message from {}: {}'.format(contact_name,cd['subject'])
+                contact_subject = '[CiteSeerX Feedback] Message from {} ({}): {}'.format(contact_name, contact_email, cd['subject'])
                 content = "{}Contact's email: {}".format(cd['content'],contact_email)
                 html_content = "<p>{}</p><p><strong>Contact's Email:</strong> {}</p>".format(cd['content'],contact_email)
 

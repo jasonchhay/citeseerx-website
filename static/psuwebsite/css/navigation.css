@@ -1,0 +1,193 @@
+.header {
+    margin-top: 10px;
+}
+
+.citeseerx_logo {
+    margin-bottom: 4px;
+    float: left;
+}
+.li-1 {
+    display: inline-block;
+    margin-top: 17px;
+    color: #fff;
+}
+
+.li-2 {
+    display: inline-block;
+    margin-top: 17px;
+    margin-left: 30px;
+    margin-bottom: 0px;
+}
+
+.li-1 a, .li-2 a {
+    text-decoration: none;
+}
+
+.colorchange {
+    color: #333;
+    pointer-events: auto;
+}
+
+.colorchange:hover {
+    color: #46788a;
+}
+
+.header ul {
+    padding: 0;
+}
+
+
+/*
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+
+a:hover {
+    border-bottom: 0px;
+}
+*/
+
+.active-choice {
+    color: #fff;
+    border-bottom: 3px solid #fff;
+}
+
+.navbar-custom {
+    background-color: White;
+    color: #093162;
+    margin-bottom: 7px;
+}
+
+.navbar-left-img {
+    margin-top: -10px;
+}
+
+.navbar-right-custom {
+    margin-top: 15px;
+}
+
+* {
+    box-sizing: border-box;
+}
+/*
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+header {
+    animation-duration: 1s; /* the duration of the animation 
+    animation-timing-function: ease-out; /* how the animation will behave 
+    animation-delay: 0s; /* how long to delay the animation from starting 
+    animation-iteration-count: 1; /* how many times the animation will play 
+    animation-name: slideInFromLeft; /* the name of the animation we defined above 
+}
+*/
+.backgroundimage {
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    display: table;
+    background-position: 0 -310px;
+    /*background-image: url('../img/IST1.jpg');*/
+}
+
+.psunav {
+    width: inherit;
+    height: inherit;
+    list-style: none;
+    text-align: left;
+    background-color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #fff;
+    padding-bottom: 3px;
+    float: right;
+}
+
+.psunav ul {
+    margin-bottom: 0px;
+}
+/* The dropdown container */
+.dropmenu {
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: transparent;
+    border: none;
+    color: inherit;
+    cursor: default;
+}
+
+.dropbtn i {
+    height: inherit;
+}
+/* Dropdown content (hidden by default) */
+.dropmenu-content {
+    margin-top: -1px;
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    font-size: 16px; 
+}
+
+/* Show the dropdown menu on hover */
+#dropbtn-people:hover #dropmenu-content-people, #dropmenu-content-people:hover {
+    display: block;
+}
+
+#dropbtn-downloads:hover #dropmenu-content-downloads {
+    display: block;
+}
+
+#dropbtn-contact:hover #dropmenu-content-contact {
+    display: block;
+}
+/* Links inside the dropdown */
+.dropmenu-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropmenu-content a:hover {
+    background-color: #ddd;
+}
+
+.pagetitle {
+    background: linear-gradient(#0078A4,#00678e);
+    padding: 0px;
+    /*box-shadow: #093147 0px 0px 4px 2px inset;*/
+    border-top: solid;
+    border-color: #0078A4;
+    height: 80px;
+}
+
+.titletext {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    text-align: left;
+    margin-left: -9px;
+    margin-top: 30px;
+}
+

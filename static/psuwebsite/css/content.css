@@ -1,0 +1,384 @@
+.sponsors {
+    width: 125px;
+    margin-right: 15px;
+    text-align: center;
+}
+
+/*collapsables*/
+
+
+.collapse-panel {
+    width: 102%;
+    background-color: #9fb8c3;
+    outline: none;
+    margin-left: -10px;
+    border: none;
+    margin-bottom: 10px;
+    padding: 0 6px;
+    overflow: hidden;
+}
+
+.collapse-panel:hover {
+    background-color: #80949c;
+}
+
+.collapse-header {
+    padding-bottom: 10px;
+}
+/*
+.collapsible:hover {
+    background-color: #80949c;
+}
+
+.collapsible h2 {
+    background-color: transparent;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 0px;
+    text-align: left;
+}
+
+.collapsible strong {
+    float: left;
+}
+.collapsible i {
+    float: right;
+}
+
+    */
+
+.collapsible:after {
+    content:"";
+    color: black;
+}
+
+.collapse-text {
+    float: left;
+}
+
+.collapse-panel i {
+    float: right;
+}
+.collapsible:after .fa-chevron-up {
+    display: inline;
+}
+
+.collapsible:after .fa-chevron-down {
+    content: "";
+    display: none;
+}
+    /*prevents 'snap' with collapsing item*/
+    .well {
+        margin: 0;
+    }
+
+.collapse-panel .collapse:after {
+    /* symbol for "opening" panels */
+    font-family: 'Glyphicons Halflings'; /* essential for enabling glyphicon */
+    content: "\e114"; /* adjust as needed, taken from bootstrap.css */
+    float: right; /* adjust as needed */
+    color: grey; /* adjust as needed */
+    background-color: black;
+}
+
+.collapse-panel .collapse.collapsed:after {
+    /* symbol for "collapsed" panels */
+    content: "\e080"; /* adjust as needed, taken from bootstrap.css */
+}
+
+/* Features */
+
+/*Contact Form CSS*/
+.contact_info {
+    word-wrap: break-word;
+    width: 50%;
+    overflow: hidden;
+    float: left;
+    padding-right: 5%;
+}
+
+.contact_info li {
+    vertical-align: top;
+}
+.contact_form {
+    margin-top: 10px;
+    float:left;
+}
+
+.g-recaptcha {
+    margin-top:5px;
+    margin-bottom:10px;
+    height: inherit;
+}
+
+.long_text_box {
+    width: 100%;
+}
+
+.name_input {
+    width: 100%;
+
+}
+
+.first_name {
+    float: left;
+    padding-right: 10px;
+    width: 50%;
+}
+
+.last_name {
+    float: left;
+    width: 50%;
+}
+
+.submit-button {
+    padding: 4px;
+    background-color: #e6e6e6;
+    border: 1px solid #d6d6d6;
+    color: #4b5a63;
+    box-shadow: 0 2px 2px 0px rgba(0,0,0,0.1);
+}
+
+.submit-button:disabled, .submit-button-disabled {
+    background-color: #e0e0e0;
+    color: #949494;
+    box-shadow: 0 2px 2px 0px rgba(0,0,0,0.1);
+    border: 1px solid #d6d6d6;
+    padding: 4px;
+}
+
+.submit-button:active {
+    background-color: #c6c6c6;
+}
+
+.submit-button:hover:enabled {
+    border-color: #aac0ca;
+}
+
+.submit-button:focus {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/*Team CSS*/
+
+.teams {
+    display: inline-block;
+    padding: 0px;
+    left: 100px;
+    right: 100px;
+    position: static;
+}
+
+.group {
+    margin-bottom: 40px;
+}
+
+.profile {
+    background-color: #e0e6e8;
+    width: inherit;
+    height: 225px;
+    padding: 14px;
+    display: inline-block;
+    margin-bottom: 0px;
+    -webkit-transition: .25s;
+    -moz-transition: .25s;
+    -o-transition: .25s;
+    transition: .25s;
+    overflow: hidden;
+}
+
+.profile-content {
+    overflow: hidden;
+}
+
+.profile-link a {
+    text-decoration: none;
+}
+a:hover .profile {
+    background-color: #cbcfd0;
+    -webkit-transition: .25s;
+    -moz-transition: .25s;
+    -o-transition: .25s;
+    transition: .25s;
+}
+.profile h3 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 16px;
+}
+
+.profile h4 {
+    margin-top: 0px;
+    margin-bottom: 5px;
+    font-size: 13px;
+}
+
+.image-cropper {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10%;
+    display: inline-block;
+    text-align: center;
+    margin: 12px;
+}
+
+.image-cropper img {
+    display: inline;
+    /*
+    margin: auto;
+    height: auto%;
+    width: 100%;
+    */
+}
+
+.profile-text {
+    text-align: center;
+    z-index: 1;
+    background-color: white;
+    border: solid #d5dcde;
+    border-width: 0 1px;
+    padding: 12px 16px;
+    box-shadow: -2px 6px 9px -5px #cfcfcf;
+    font-weight: 500;
+}
+
+.profile-content {
+    margin: 0px 4px 0px 4px;
+    text-align: center;
+    display: block;
+    width: 225px;
+}
+
+.profile-dropdown {
+    display: inline-block;
+    margin: 8px;
+}
+
+/* Submit Form CSS*/
+.file_formats {
+    word-wrap: break-word;
+    width: 60%;
+    overflow: hidden;
+    float: left;
+    padding-right: 10%;
+}
+
+.submit_form {
+    float: left;
+}
+
+/*Features CSS*/
+.column {
+    width: 30%;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 auto;
+}
+.column ul li {
+    list-style-type: none;
+    text-align: left;
+}
+
+.dropdown {
+    position: relative;
+}
+.dropdown-content {
+    display:none;
+    position: absolute;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropdown-content:hover, .dropdown-content:hover {
+    display:none;
+}
+
+
+/* Publications CSS */
+.filter {
+    width: 250px;
+    height: inherit;
+    float: left;
+    background-color: #9fb8c3;
+    padding: 15px;
+    overflow: hidden;
+    margin: 0 25px 25px 0;
+}
+
+.filter-content input {
+    width: 100%;
+    display: inline-block;
+    border: 1px solid #ccc;
+    height: 35px;
+    padding: 10px;
+    border-width: 1px;
+}
+.filter-content p {
+    margin-bottom: 0;
+    float: left;
+}
+#id_year__gte, #id_year__lte {
+    display: none;
+    float: left;
+    width: 50%;
+}
+
+#slider-range {
+    margin-top: 4px;
+}
+
+.filter-content {
+    text-align: center;
+}
+.filter-content form, .filter-content form, .filter-content input, filter-content p{
+    margin: 0;
+}
+
+.filter h2 {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+#filter-search {
+    display: inline-block;
+    margin-top: 8px;
+}
+
+.publications {
+    width: 75%;
+    float: right;
+    height: inherit;
+    float: left;
+}
+
+.publication_document {
+    padding: 0px;
+}
+
+.publication_document li {
+    padding: 10px 10px 5px 10px;
+}
+
+.publication1 {
+    background-color: #e0e6e8;
+}
+
+.publication2 {
+    background-color: #cdd5d8;
+}
+
+.pagination {
+    float: right;
+    width: 175px;
+}
+
+.citations {
+    margin-top: 20px;
+
+}
