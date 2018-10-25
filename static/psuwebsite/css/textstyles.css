@@ -1,0 +1,394 @@
+.pagebody {
+    background-color: #f2f2f2;
+
+}
+
+.bodytext {
+    padding-top: 45px;
+    padding-bottom: 50px;
+}
+
+h2 {
+    font-size: 25px;
+}
+
+h2, h3, h4 {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    font-weight: 700;
+}
+
+.section-header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 6px;
+    width: 102%;
+    background-color: #9fb8c3;
+    outline: none;
+    margin-left: -9px;
+    border: none;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    overflow: hidden;
+}
+
+.section-header h2 {
+    float: left;
+}
+
+.collapse-panel h2, .section-header h2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+a:hover {
+    text-decoration: none;
+}
+
+.content h3 {
+    font-weight: 700;
+}
+
+#acknowledgements p {
+    margin-left: 12px;
+}
+.ptext {
+    margin-bottom: 30px;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    color: #646464;
+    text-align: justify;
+    line-height: 25px;
+}
+
+.ptext a p u li {
+    color: #337ab7
+}
+
+.peopletitletext {
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    margin-left: -16px;
+}
+
+.teamtext {
+    font-size: 40px;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+}
+
+.alumnitext {
+    font-size: 35px;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+    float: left;
+    margin-top: 20px;
+    margin-left: -102px;
+}
+
+.level {
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    float: left;
+}
+
+.alumnilevel {
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+    float: left;
+    margin-top: 100px;
+    margin-left: -124px;
+}
+
+.alumnilevel-1 {
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+    float: left;
+    margin-top: 20px;
+    margin-left: -13px;
+}
+
+.Currentposition {
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 100px;
+}
+
+.Currentposition-1 {
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.level-0 {
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    float: left;
+    margin-left: -102px;
+    margin-top: 45px;
+}
+
+.level-1 {
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    float: left;
+    margin-left: -102px;
+}
+
+.level-2 {
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    float: left;
+    margin-left: 0px;
+}
+
+.professor-row {
+    clear: both;
+    min-height: 110px;
+    margin-bottom: 20px;
+}
+
+.alumni-row {
+    clear: both;
+    min-height: 30px;
+    margin-bottom: 10px;
+}
+
+.picture {
+    float: left;
+    margin-bottom: 20px;
+}
+
+.professor-name {
+    margin-left: 130px;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+}
+
+.alumni-name {
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+}
+
+.professor-shortdescription {
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 130px;
+}
+
+.professor-description {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 130px;
+}
+
+.alumni-description {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    margin-left: -10px;
+}
+
+.team-row {
+    clear: both;
+    min-height: 110px;
+    margin-bottom: 20px;
+}
+
+.alumni-major {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+}
+
+.titleform {
+    width: 103%;
+    height: 48px;
+    background-color: #fff;
+    position: relative;
+    font-size: 32px;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.centerinputfix {
+    margin-left: -10px;
+}
+
+.highlight {
+    background-color: #BDC3C7 !important;
+}
+
+table {
+    border-collapse: separate;
+}
+
+.border-bottom-black {
+
+    border-bottom: 2px solid #BDC3C7 !important;
+    vertical-align: bottom;
+    height: 10px;
+}
+
+.highlight2 {
+    background-color: #EDF0F1 !important;
+}
+
+.fontchange {
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.venuelabel {
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 20px;
+    font-weight: 400;
+    border-bottom: 2px solid #093162 !important;
+}
+
+
+.labelword {
+    word-wrap: break-word;
+    display: inline;
+}
+
+
+
+label {
+  display: block;
+  padding-left: 15px;
+  text-indent: -15px;
+}
+
+input {
+    width: inherit;
+    height: inherit;
+    padding: 0;
+    margin: 0;
+    vertical-align: bottom;
+    position: relative;
+    top: -1px;
+    *overflow: hidden;
+    margin-bottom: 10px;
+}
+
+
+.peoplesidebartext {
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 7px;
+    border-bottom: 2px solid #093162 !important;
+}
+
+.peopledirectory {
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 10px;
+    margin-top: -15px;
+}
+
+.projecttitle {
+    font-family: 'Roboto', sans-serif;
+    color: black !important;
+    border-bottom: 2px solid #093162 !important;
+}
+
+.projectsheader {
+    font-family: 'Roboto', sans-serif;
+    color: black !important;
+    font-size: 36px;
+    font-weight: 400;
+}
+
+.projectpeople {
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+
+}
+
+.blogauthor {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: #808080;
+}
+
+.blogtext {
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+}
+
+.required {
+    color: red;
+    font-size: 10px;
+    vertical-align: super;
+    margin-left: 3px;
+}
+
+.error {
+    color: red;
+}
+
+u {
+    color: #333;
+    font-weight: 600;
+}
+
+.ptext .sie-section-header {
+    color: #333;
+    text-decoration: none;
+}
+
+.ptext .sie-section-header:hover {
+    color: #333;
+}
+
+#features {
+    margin: auto;
+    width: 95%;
+}
+
+.features td {
+    vertical-align: top;
+    display: inline-block;
+    text-align:center;
+    margin: 5px;
+}
+
+.features-header {
+    text-align: center;
+    font-weight: 700;
+    padding: 25px 0 25px 0;
+    width: 345px;
+    background-color: #e0e6e8;
+    border: 1px solid #d5dcde;
+    box-shadow: -2px 6px 9px -5px #cfcfcf;
+    position: relative;
+    align-content: center;
+}
+
+.features-header:hover {
+    border: 1px solid #cbcfd0;
+    background-color: #cbcfd0;
+    text-decoration: none;
+    outline-width: 0;
+}
+
+.features-text {
+    text-align: center;
+    z-index: 1;
+    background-color: white;
+    border: solid #d5dcde;
+    border-width: 0 1px;
+    padding: 12px 16px;
+    box-shadow: -2px 6px 9px -5px #cfcfcf;
+    font-weight: 500;
+
+}
+.filter {
+    color: black;
+}

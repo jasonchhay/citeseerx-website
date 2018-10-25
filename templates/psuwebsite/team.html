@@ -13,7 +13,7 @@
                     <div class="profile">
                         <div class="profile-content">
                             <div class="image-cropper">
-                                <img src="{{ person.image.url }}" alt="img">
+				<img src="{% static person.image.url %}" alt="img">
                             </div>
                             <h3><strong>{{ person.fullname }}</strong></h3>
                             <h4>{{ person.role }}</h4>

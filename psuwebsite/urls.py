@@ -36,8 +36,6 @@ urlpatterns = [
 
     path('people/', include('people.urls')),
 
-    path('publications/', include('publications.urls')),
-
     path('contact/', include('contact.urls')),
 
     path('downloads/', include('downloads.urls')), 
